@@ -1,38 +1,585 @@
-.App {
-  text-align: center;
+/* ================= Font Imports =================*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url(Montserrat/Montserrat-ExtraLight.ttf);
+  font-weight: 100;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Montserrat';
+  src: url(Montserrat/Montserrat-Light.ttf);
+  font-weight: 200;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Montserrat';
+  src: url(Montserrat/Montserrat-LightItalic.ttf);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: 'Montserrat';
+  src: url(Montserrat/Montserrat-Regular.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(Montserrat/Montserrat-Medium.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(Montserrat/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(Montserrat/Montserrat-Bold.ttf);
+  font-weight: 700;
+}
+
+/* ================= Global Styles =================*/
+
+html, body {
+  background-color: #0E0622;
+  color: white;
+  font-family: 'Montserrat';
+  font-size: medium;
+
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.dropShadow {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= Navigation Bar Styles =================*/
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 90px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.navButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navButtonsContainer a {
+  color: rgba(255, 255, 255, .6);
+  text-decoration: none;
+  margin: 0px 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navButtonsContainer a.lastRight {
+  margin-right: 0px;
+}
+
+.navButtonsContainer a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+a.currentNavButton {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 2.5px;
+}
+
+/* ================= Intro Header Styles =================*/
+
+.introContainer {
+  display: flex;
+  justify-content: center;
+  width: 65vw;
+  padding: 175px 0px 60px 0px;
+  margin: auto;
+}
+
+.introBar {
+  width: 15px;
+  align-self: stretch;
+  margin-right: 30px;
+  border-radius: 100px;
+  background-color: #FFD580;
+}
+
+.introDescription {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.introDescription h3 {
+  padding-bottom: 10px;
+  margin: 0px;
+  color: cyan;
+}
+
+.introDescription span {
+  font-weight: 400;
+}
+
+.semiBold {
+  font-weight: 600;
+}
+
+/* ================= Work Page Projects Section Styles =================*/
+
+.workContentContainer {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: auto;
+  margin: 40px 90px;
+  gap: 30px;
+}
+
+/* ================= Filter Button Styles =================*/
+
+.filterContainer {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.filterLabel {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 18px;
+}
+
+.filterButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  padding: 5px 20px;
+  border: 3px solid white;
+  border-radius: 100px;
+  position: relative;
+}
+
+.filterContainer select{
+  -webkit-appearance: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+
+  border: none;
+  background-color: transparent;
+}
+
+select option {
+  background-color: white;
+  color: darkslategray;
+}
+
+.arrow {
+  border: solid 3px white;
+  border-width: 0px 3px 3px 0px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+
+  margin-top: 1px;
+  right: 25px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* ================= Project Grid Styles =================*/
+
+.projectGridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+
+  /* margin-left: -2rem;
+  margin-bottom: -2rem; */
+}
+
+.projectGridContainer a {
+  /* margin-left: 2rem;
+  margin-bottom: 2rem; */
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+.projectContainer {
+  min-width: 350px;
+}
+
+.projectSquare {
+  width: 100%;
+  padding-top: 80%;
+  background-color: white;
+  position: relative;
+}
+
+.projectOverlayContainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  align-items: flex-end;
+  visibility: hidden;
+}
+
+.projectOverlayContainer.visible {
+  visibility: visible;
+}
+
+.projectHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 40px 40px;
+}
+
+.projectTitle {
+  font-size: 33px;
+  font-weight: 600;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.projectSkills {
+  font-size: 14px;
+  font-weight: 600;
+  color: lightgray;
+  line-height: 1.75;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projectDivider {
+  border-bottom: 2px solid  #FFD580;
+  width: 100%;
 }
+
+.projectDivider.long {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.projectDivider.short {
+  margin-bottom: 15px;
+  width: 30%;
+}
+
+/* ================= Archive Button & Footer Styles =================*/
+.rectButton {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 50px auto 0px auto;
+  padding: 10px 40px;
+
+  border: 4px solid white;
+}
+
+.footerBackground {
+  width: auto;
+  background-color: #232323;
+  padding: 55px 90px;
+  margin-top: 100px;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footerContentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  border-bottom: 1px solid gray;
+  margin-bottom: 15px;
+  padding-bottom: 25px;
+}
+
+.contactInfo {
+  width: 50%;
+}
+
+.email {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footerExternalLinks {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.footerExternalLinks img {
+  width: 30px;
+}
+
+.footerInternalLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: 100px;
+  flex-grow: .3;
+}
+
+.footerInternalLinks a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0px;
+  font-weight: 600;
+}
+
+.footerInternalLinks a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.copyrightText {
+  color: gray;
+}
+
+/* ================= About Me Header Styles =================*/
+.aboutHeaderContainer {
+  padding: 120px 150px 80px 150px;
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.aboutHeaderContainer img {
+  width: 25%;
+}
+
+.aboutDetailsContainer {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.aboutHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: .8;
+  gap: 20px;
+  padding: 0px 0px 0px 90px;
+}
+
+.aboutTitle {
+  font-size: 64px;
+  font-weight: bold;
+  color: #FFEA9F;
+}
+
+.aboutDescription {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5em;
+  color: lightgray;
+}
+
+.aboutLinks {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: .2;
+  padding: 0px 10px;
+  gap: 60px;
+}
+.aboutLinks img {
+  width: 40px;
+}
+
+/* ================= Game Corner & Art Gallery Callout Styles =================*/
+.otherWork {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 150px;
+  border-top: 2px solid white;
+}
+
+.aboutCallout {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 55px 0px;
+  gap: 20px;
+}
+
+.aboutCalloutTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.calloutSubHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.calloutSubHeader span {
+  border-top: 2px solid white;
+  width: 5%;
+}
+
+.rectButton.small {
+  font-size: 16px;
+  padding: 5px 30px;
+  margin: 20px auto;
+  border: 3px solid white;
+}
+
+/* ================= Game Review Card Styles =================*/
+.gameCardBack {
+  background-color: white;
+  color: darkslategray;
+  display: flex;
+  max-width: 350px;
+  height: 60vh;
+  flex-direction: column;
+}
+
+a.gamePostLink {
+  text-decoration: none;
+  max-width: 350px;
+}
+
+.headerImage {
+  height: 50%;
+  background-color: gray;
+}
+
+.headerImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%
+}
+
+.gameCardDetailsContainer {
+  display: flex;
+  justify-content: space-around;
+  max-height: 40%;
+  padding: 30px 30px 40px 50px;
+}
+
+.gameCardDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 0;
+}
+
+.gameTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.gameReview {
+  font-size: 14px;
+  line-height: 1.25em;
+  overflow: hidden;
+  color: gray;
+  position: relative;
+}
+
+.textGradient {
+  background: linear-gradient(transparent, white);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.gameRating {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.gameRating img {
+  width: 30px;
+  margin-top: 8px;
+}
+
+.workContentContainer.games {
+  margin: 40px 150px;
+}
+
+.projectGridContainer.games {
+  gap: 65px;
+}
+
+/* ================= Gallery Preview Styles =================*/
+
+.aboutCalloutGallery {
+  display: flex;
+  align-items: center;
+  width: 650px;
+}
+
+.aboutCalloutGallery > img {
+  height: 57vh;
+  margin-left: 10px;
+}
+
+.aboutCalloutGallery div {
+  display: flex;
+  height: 60vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items:center;
+}
+
+.aboutCalloutGallery > div > img {
+  height: 27vh;
+  margin: 0px;
+}
+
