@@ -5,21 +5,21 @@ class ProjectSquare extends Component {
     constructor(props){
         super(props);
         this.state = {
-            hovering: false            
+            hovering: false,
         }
     }
 
     onHovering = () => {
         this.setState((prevState) => ({
             ...prevState,
-            hovering: true
+            hovering: true,
         }))
     }
 
     offHovering = () => {
         this.setState((prevState) => ({
             ...prevState,
-            hovering: false
+            hovering: false,
         }))
     }
 
@@ -38,17 +38,16 @@ class ProjectSquare extends Component {
 
     render() {
         const squareStyle = {
-            background: this.props.backgroundImgURL,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center'
+            backgroundImage: this.props.backgroundImgURL,
+            backgroundPosition: 'center center',
         }
         return (
             this.checkIfShouldBeRendered() ?
                 <a href='' onMouseOver={this.onHovering} onMouseOut={this.offHovering}>
                     <div className='projectContainer dropShadow'>
-                        <div className='projectSquare' style={squareStyle}>
-                            <div className={this.state.hovering ? 'projectOverlayContainer visible' : 'projectOverlayContainer'}>
-                                <div className='projectHeaderContainer'>
+                        <div className={`projectSquare ${this.state.hovering ? 'zoomed' : ''}`} style={squareStyle}>
+                            <div className={`projectOverlayContainer ${this.state.hovering ? 'visible' : ''}`}>
+                                <div className={`projectHeaderContainer ${this.state.hovering ? "hovering" : ""}`}>
                                     <span className='projectTitle'>{this.props.title}</span>
                                     <span className='projectDivider long'></span>
                                     <span className='projectDivider short'></span>

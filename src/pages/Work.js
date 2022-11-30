@@ -73,7 +73,7 @@ class Work extends Component {
                     </div>
 
                     {/* ========== See Archive Button ========== */}
-                    <Link to='/archive' className='rectButton'>SEE ARCHIVE</Link>
+                    <Link to='/archive' className='rectButton hvr-shutter-out-horizontal'>SEE ARCHIVE</Link>
                 </div>
             </div>
         );

@@ -59,6 +59,49 @@ html, body {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
 }
 
+/* ================= Cool Animations Found Online =================*/
+
+/* Shutter Out Horizontal */
+.hvr-shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  background: transparent;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+  color: #373D3F;
+}
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 /* ================= Navigation Bar Styles =================*/
 
 .navContainer {
@@ -66,11 +109,19 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 40px 90px;
+  z-index: 999;
+  -webkit-transition: padding 0.5s, background-color 0.5s;
+  transition: padding 0.5s, background-color 0.5s;
 
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+}
+
+.navContainer.filled {
+  padding: 30px 90px 26px 90px;
+  background-color: rgba(0, 0, 0, .7);
 }
 
 .navButtonsContainer {
@@ -84,6 +135,7 @@ html, body {
   margin: 0px 30px;
   font-size: 18px;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 .navButtonsContainer a.lastRight {
@@ -96,9 +148,15 @@ html, body {
 
 a.currentNavButton {
   color: rgba(255, 255, 255, 1);
-  text-decoration: underline;
-  text-underline-offset: 12px;
-  text-decoration-thickness: 2.5px;
+
+  border-bottom: white 3px solid;
+  padding-bottom: 8px;
+  transition: padding-bottom 0.5s, border-bottom 0.5s;
+}
+
+a.currentNavButton.small {
+  padding-bottom: 4px;
+  border-bottom: white 1.5px solid;
 }
 
 /* ================= Intro Header Styles =================*/
@@ -219,14 +277,9 @@ select option {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-
-  /* margin-left: -2rem;
-  margin-bottom: -2rem; */
 }
 
 .projectGridContainer a {
-  /* margin-left: 2rem;
-  margin-bottom: 2rem; */
   flex-grow: 1;
   max-width: 400px;
 }
@@ -240,6 +293,12 @@ select option {
   padding-top: 80%;
   background-color: white;
   position: relative;
+  background-size: 100%;
+  transition: background-size 0.5s;
+}
+
+.projectSquare.zoomed {
+  background-size: 120%;
 }
 
 .projectOverlayContainer {
@@ -251,11 +310,12 @@ select option {
 
   display: flex;
   align-items: flex-end;
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .projectOverlayContainer.visible {
-  visibility: visible;
+  opacity: 1;
 }
 
 .projectHeaderContainer {
@@ -264,6 +324,11 @@ select option {
   height: auto;
   justify-content: flex-end;
   align-items: flex-start;
+  padding: 10px 40px;
+  transition: padding 0.5s;
+}
+
+.projectHeaderContainer.hovering {
   padding: 40px 40px;
 }
 
@@ -380,7 +445,7 @@ select option {
 
 /* ================= About Me Header Styles =================*/
 .aboutHeaderContainer {
-  padding: 120px 150px 80px 150px;
+  padding: 120px 200px 80px 200px;
   height: 60vh;
   display: flex;
   justify-content: space-around;
@@ -435,8 +500,8 @@ select option {
 /* ================= Game Corner & Art Gallery Callout Styles =================*/
 .otherWork {
   display: flex;
-  justify-content: space-between;
-  margin: 0px 150px;
+  justify-content: space-around;
+  margin: 0px 90px;
   border-top: 2px solid white;
 }
 
@@ -446,7 +511,7 @@ select option {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 55px 0px;
+  margin: 70px 0px 0px 0px;
   gap: 20px;
 }
 
@@ -492,7 +557,7 @@ a.gamePostLink {
 }
 
 .headerImage {
-  height: 50%;
+  height: 45%;
   background-color: gray;
 }
 
@@ -512,7 +577,7 @@ a.gamePostLink {
 .gameCardDescriptionContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   min-width: 0;
 }
 

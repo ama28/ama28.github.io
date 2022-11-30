@@ -13,12 +13,17 @@ import {
   useParams
 } from "react-router-dom";
 import Archive from './pages/Archive';
+import NavBar from './components/NavBar';
+import Papa from "papaparse";
+import GamePosts from './GamePosts.csv';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       background: `url('${process.env.PUBLIC_URL}/assets/images/background.jpg')`,
+      currentPage: 'Work',
+      data: '',
       projects: [
         {
             backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/c1.png')`,
@@ -33,7 +38,7 @@ class App extends Component {
             category: {design: false, games: true, research: false}
         },
         {
-            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/channel.svg')`,
+            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/channel.png')`,
             title:'Channel',
             skills:'GAME DESIGN · PROGRAMMING',
             category: {design: false, games: true, research: false}
@@ -52,30 +57,30 @@ class App extends Component {
         },
       ],
       gamePosts: [
-        {
-            imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
-            title:'Minecraft',
-            description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
-            starCount: 1
-        },
-        {
-            imageURL: `${process.env.PUBLIC_URL + "/assets/images/omori.jpg"}`,
-            title:'Omori',
-            description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
-            starCount: 4
-        },
-        {
-            imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
-            title:'Minecraft',
-            description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
-            starCount: 3
-        },
-        {
-            imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
-            title:'Minecraft',
-            description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
-            starCount: 2
-        },
+        // {
+        //     imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
+        //     title:'Minecraft',
+        //     description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
+        //     starCount: 1
+        // },
+        // {
+        //     imageURL: `${process.env.PUBLIC_URL + "/assets/images/omori.jpg"}`,
+        //     title:'Omori',
+        //     description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
+        //     starCount: 4
+        // },
+        // {
+        //     imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
+        //     title:'Minecraft',
+        //     description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
+        //     starCount: 3
+        // },
+        // {
+        //     imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
+        //     title:'Minecraft',
+        //     description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
+        //     starCount: 2
+        // },
       ],
       archivedProjects: [
         {
@@ -91,7 +96,7 @@ class App extends Component {
             category: {design: false, games: true, research: false}
         },
         {
-            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/channel.svg')`,
+            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/channel.png')`,
             title:'Channel',
             skills:'GAME DESIGN · PROGRAMMING',
             category: {design: false, games: true, research: false}
@@ -110,13 +115,37 @@ class App extends Component {
         },
       ],
     }
+    this.updateData = this.updateData.bind(this)
   }
 
-  setBackground(backgroundURL) {
+  switchPage = (backgroundURL, nextPage) => {
     this.setState(prevState => ({
       ...prevState,
-      background: backgroundURL
+      background: backgroundURL,
+      currentPage: nextPage
     }))
+  }
+
+  componentDidMount() {
+    Papa.parse(GamePosts, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: this.updateData
+    });
+  }
+
+  updateData(result) {
+    const data = result.data.map((post, idx) => {
+      return {
+        title: post.title,
+        imageURL: `${process.env.PUBLIC_URL + "/assets/images/" + post.imageURL}`,
+        starCount: parseInt(post.rating),
+        description: post.description
+      }
+    })
+    console.log(data[0]);
+    this.setState({gamePosts: data});
   }
   
   render() {
@@ -132,19 +161,9 @@ class App extends Component {
       <div style={backgroundStyle}>
         {/* ======= Navigation Router ======= */}
         <Router>
-          {/* A Navigation Bar which contains all the buttons
-              needed to navigate through the core pages of the site. */}
-          <div className="navContainer">
-            <a href=''>
-                <img src={process.env.PUBLIC_URL + "/assets/icons/mylogo.png"} width={"55px"}/>
-            </a>
-            <div className="navButtonsContainer">
-                <Link to="/" className="currentNavButton"
-                  onClick={() => this.setBackground(`url('${process.env.PUBLIC_URL}/assets/images/background.jpg')`)}>WORK</Link>
-                <Link to="/about" className='lastRight' 
-                onClick={() => this.setBackground(`url('${process.env.PUBLIC_URL}/assets/images/darkened_background.jpg')`)}>ABOUT</Link>
-            </div>
-          </div>
+          <NavBar 
+            switchPage={this.switchPage.bind(this)}
+            currentPage={this.state.currentPage}/>
 
           {/* A <Routes> looks through its children <Route>s and
               renders the first one that matches the current URL. */}

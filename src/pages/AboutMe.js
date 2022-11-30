@@ -90,7 +90,7 @@ class AboutMe extends Component {
                             description={this.props.gamePosts[this.props.gamePosts.length-1].description}
                             imageURL={this.props.gamePosts[this.props.gamePosts.length-1].imageURL}/>
 
-                        <Link to='/games' className='rectButton small'>SEE MORE</Link>
+                        <Link to='/games' className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
                     </div>
 
                     <div className='aboutCallout artAndMore'>
@@ -102,7 +102,7 @@ class AboutMe extends Component {
                             <div>FEATURED WORK</div>
                             <span className='calloutSubHeadLine'></span>
                         </div>
-
+                        
                         {/* very manual, needs to be refactored — especially the styles*/}
                         <div className='aboutCalloutGallery'>
                             <div className='galleryLeft'>
@@ -111,7 +111,7 @@ class AboutMe extends Component {
                             <img src={`${process.env.PUBLIC_URL + "/assets/images/dungeonp_screen.png"}`} className="dropShadow"></img>
                         </div>
 
-                        <Link to='/games' className='rectButton small'>SEE MORE</Link>
+                        <Link to='/games' className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
                     </div>
                 </div>
             </div>
