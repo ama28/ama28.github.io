@@ -63,6 +63,19 @@ html, body {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8);
 }
 
+h1 {
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+br {
+  margin-top: 2em;
+}
+
 /* ================= Cool Animations Found Online =================*/
 
 /* Shutter Out Horizontal */
@@ -666,3 +679,24 @@ a.gamePostLink.enlarged {
 }
 
 /* ================= Game Modal Styles =================*/
+.modalHeader {
+  width: 100%;
+  object-fit: cover;
+  object-position: 0px 8%;
+  height: 400px;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 3px solid lightgray;
+}
+
+.modalContent {
+  padding: 50px 150px 120px 150px;
+  color: darkslategray;
+  line-height: 1.5em;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.modalContent img {
+  width: 100%;
+  margin: 20px 0px;
+}
