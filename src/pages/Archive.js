@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import PageHeader from '../components/PageHeader';
 import ProjectSquare from '../components/ProjectSquare';
 
 class Archive extends Component {
@@ -28,21 +29,16 @@ class Archive extends Component {
                         category={item.category}/>
         })
     }
-
+    
     render() {
         return(
             <div>
                 {/* ========== Header for Archive Page ========== */}
-                <div className='introContainer'>
-                    <div className='introBar'></div>
-                    <div className='introDescription'>
-                        <h3>Archived Projects</h3>
-                        <span style={{fontSize: '20px', lineHeight: '1em'}}>
-                            More projects that are old or smaller in scope. Some were completed in my HCI coursework at Carnegie Mellon, 
-                            others are just fun personal projects!
-                        </span>
-                    </div>
-                </div>
+                <PageHeader
+                    currentPage='Archive'
+                    title="Archived Projects"
+                    normalDescription="More projects that are old or smaller in scope. Some were completed through my coursework at Carnegie Mellon, others are just fun personal projects."
+                />
 
                 <div className='workContentContainer'>
                     {/* ========== Filter Button ========== */}

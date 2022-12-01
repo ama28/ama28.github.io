@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class GamePost extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            hovering: false,
+        }
+    }
+
     checkIfShouldBeRendered = () => {
         switch (this.props.filterMode) {
             case "Highest Rating":
@@ -13,6 +20,20 @@ class GamePost extends Component {
         }
     }
 
+    onHovering = () => {
+        this.setState((prevState) => ({
+            ...prevState,
+            hovering: true,
+        }))
+    }
+
+    offHovering = () => {
+        this.setState((prevState) => ({
+            ...prevState,
+            hovering: false,
+        }))
+    }
+
     renderStar(index) {
         if (this.props.starCount >= index)
             return <img src={process.env.PUBLIC_URL + "/assets/icons/yellow_star.svg"}></img>;
@@ -22,8 +43,8 @@ class GamePost extends Component {
 
     render () {
         return (
-            <a href='' className='gamePostLink'>
-                <div className='gameCardBack dropShadow'>
+            <a href='' className={`gamePostLink dropShadow ${this.state.hovering ? 'enlarged' : ''}`} onMouseOver={this.onHovering} onMouseOut={this.offHovering}>
+                <div className='gameCardBack'>
                     <div className='headerImage'>
                         <img src={this.props.imageURL}></img>
                     </div>

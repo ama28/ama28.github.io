@@ -2,6 +2,7 @@ import { toHaveAttribute } from '@testing-library/jest-dom/dist/matchers';
 import React, { Component } from 'react';
 import '../App.css';
 import ProjectSquare from '../components/ProjectSquare';
+import PageHeader from '../components/PageHeader';
 import {
     BrowserRouter as Router,
     Routes,
@@ -39,17 +40,18 @@ class Work extends Component {
     }
 
     render() {
+        const description = 
+            <div className='introDescription'>
+                <b>Adrian Ma</b> is a designer focused on creating <span className='semiBold' style={{color: '#90EE90'}}>
+                transformative,</span> <span className='semiBold' style={{color: '#FFFF00'}}> immersive,</span> and 
+                <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> experiences. 
+            </div>
+
         return(
             <div>
                 {/* ========== Introduction at the Top of the Work Page ========== */}
-                <div className='introContainer'>
-                    <div className='introBar'></div>
-                    <div className='introDescription'>
-                        <b>Adrian Ma</b> is a designer focused on creating <span className='semiBold' style={{color: '#90EE90'}}>
-                        transformative,</span> <span className='semiBold' style={{color: '#FFFF00'}}> immersive,</span> and 
-                        <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> experiences. 
-                    </div>
-                </div>
+                <PageHeader 
+                    styledDescription={description}/>
 
                 <div className='workContentContainer'>
                     {/* ========== Filter Button ========== */}

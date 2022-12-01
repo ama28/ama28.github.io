@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import '../App.css';
 import GamePost from '../components/GamePost';
+import PageHeader from '../components/PageHeader';
+import Modal from '../components/Modal';
+import GameModal from '../components/GameModal';
 
 class Games extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filterMode:'Recent'
+            filterMode:'Recent',
+            modalIsOpen: false
         }
     }
 
@@ -14,6 +18,15 @@ class Games extends Component {
         this.setState(prevState => ({
             ...prevState,
             filterMode: event.target.value
+        }))
+    }
+
+    switchModal = (state) => {
+        state ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible"
+
+        this.setState(prevState => ({
+            ...prevState,
+            modalIsOpen: state
         }))
     }
 
@@ -66,15 +79,18 @@ class Games extends Component {
         return (
             <div>
                 {/* ========== Header for Games Page ========== */}
-                <div className='introContainer'>
-                    <div className='introBar'></div>
-                    <div className='introDescription'>
-                        <h3>Adrian's Game Corner</h3>
-                        <span style={{fontSize: '20px', lineHeight: '1em'}}>
-                            If it wasn’t obvious already, I love games! Here are some of  games that I’ve played and the impact they’ve left on me.
-                        </span>
-                    </div>
-                </div>
+                <PageHeader
+                    currentPage={this.props.currentPage}
+                    title="Adrian's Game Corner"
+                    normalDescription="If it wasn't obvious already, I love games! Here are some of the games I've played and the impact they have left on me."
+                />
+
+                <button onClick={() => this.switchModal(true)}>Open Modal</button>
+                {this.state.modalIsOpen &&
+                    <GameModal
+                        isOpen={this.state.modalIsOpen}
+                        closeModal={() => this.switchModal(false)}
+                    />}
 
                 <div className='workContentContainer games'>
                     {/* ========== Filter Button ========== */}

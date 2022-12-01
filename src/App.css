@@ -59,6 +59,10 @@ html, body {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
 }
 
+.intenseDropShadow {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8);
+}
+
 /* ================= Cool Animations Found Online =================*/
 
 /* Shutter Out Horizontal */
@@ -177,15 +181,23 @@ a.currentNavButton.small {
   background-color: #FFD580;
 }
 
+.introBar.v2 {
+  background-color: lightblue;
+}
+
 .introDescription {
   font-size: 30px;
   font-weight: 300;
 }
 
+.introDescription.small {
+  font-size: 24px;
+}
+
 .introDescription h3 {
   padding-bottom: 10px;
   margin: 0px;
-  color: cyan;
+  color: #ccfd7f;
 }
 
 .introDescription span {
@@ -452,8 +464,8 @@ select option {
   align-items: center;
 }
 
-.aboutHeaderContainer img {
-  width: 25%;
+.aboutHeaderContainer > img {
+  max-width: 25%;
 }
 
 .aboutDetailsContainer {
@@ -554,6 +566,11 @@ select option {
 a.gamePostLink {
   text-decoration: none;
   max-width: 350px;
+  transition: transform 0.3s;
+}
+
+a.gamePostLink.enlarged {
+  transform: scale(1.05);
 }
 
 .headerImage {
@@ -582,7 +599,7 @@ a.gamePostLink {
 }
 
 .gameTitle {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   margin-bottom: 8px;
 }
@@ -648,3 +665,4 @@ a.gamePostLink {
   margin: 0px;
 }
 
+/* ================= Game Modal Styles =================*/

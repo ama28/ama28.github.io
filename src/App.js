@@ -56,32 +56,7 @@ class App extends Component {
             category: {design: false, games: true, research: true}
         },
       ],
-      gamePosts: [
-        // {
-        //     imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
-        //     title:'Minecraft',
-        //     description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
-        //     starCount: 1
-        // },
-        // {
-        //     imageURL: `${process.env.PUBLIC_URL + "/assets/images/omori.jpg"}`,
-        //     title:'Omori',
-        //     description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
-        //     starCount: 4
-        // },
-        // {
-        //     imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
-        //     title:'Minecraft',
-        //     description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
-        //     starCount: 3
-        // },
-        // {
-        //     imageURL: `${process.env.PUBLIC_URL + "/assets/images/minecraft.jpg"}`,
-        //     title:'Minecraft',
-        //     description: 'Sed non ex quis orci commodo lobortis. In nec arcu nec erat tristique condimentum. Integer et augue leo. tempor elit c, porttitor mag na. tempor elit ac, porttitor magna.hnpuii Nunc tincidunt lorem condimen tumtempor elit ac, porttitor magna. tempor elit ac, porttitor magna.',
-        //     starCount: 2
-        // },
-      ],
+      gamePosts: [],
       archivedProjects: [
         {
             backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/c1.png')`,
@@ -144,7 +119,6 @@ class App extends Component {
         description: post.description
       }
     })
-    console.log(data[0]);
     this.setState({gamePosts: data});
   }
   
