@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import '../App.css';
+import GameModal from './GameModal';
 
 class GamePost extends Component {
     constructor(props){
         super(props);
         this.state = {
             hovering: false,
+            modalIsOpen: false
         }
     }
 
@@ -18,6 +20,14 @@ class GamePost extends Component {
             case "Recent":
                 return this.props.category.games;
         }
+    }
+
+    switchModal = (state) => {
+        state ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible"
+        this.setState(prevState => ({
+            ...prevState,
+            modalIsOpen: state
+        }))
     }
 
     onHovering = () => {
@@ -43,29 +53,41 @@ class GamePost extends Component {
 
     render () {
         return (
-            <a href='' className={`gamePostLink dropShadow ${this.state.hovering ? 'enlarged' : ''}`} onMouseOver={this.onHovering} onMouseOut={this.offHovering}>
-                <div className='gameCardBack'>
-                    <div className='headerImage'>
-                        <img src={this.props.imageURL}></img>
-                    </div>
-                    <div className='gameCardDetailsContainer'>
-                        <div className='gameCardDescriptionContainer'>
-                            <div className='gameTitle'>{this.props.title}</div>
-                            <div className='gameReview'>
-                                <div className='textGradient'></div>
-                                {this.props.description}
-                            </div>
+            <div>
+                <div onClick={() => this.switchModal(true)} className={`gamePostLink dropShadow ${this.state.hovering ? 'enlarged' : ''}`} 
+                     onMouseOver={() => this.onHovering()} onMouseOut={() => this.offHovering()}>
+                    <div className='gameCardBack'>
+                        <div className='headerImage'>
+                            <img src={this.props.imageURL}></img>
                         </div>
-                        <div className='gameRating'>
-                            {this.renderStar(5)}
-                            {this.renderStar(4)}
-                            {this.renderStar(3)}
-                            {this.renderStar(2)}
-                            {this.renderStar(1)}
+                        <div className='gameCardDetailsContainer'>
+                            <div className='gameCardDescriptionContainer'>
+                                <div className='gameTitle'>{this.props.title}</div>
+                                <div className='gameReview'>
+                                    <div className='textGradient'></div>
+                                    {this.props.description}
+                                </div>
+                            </div>
+                            <div className='gameRating'>
+                                {this.renderStar(5)}
+                                {this.renderStar(4)}
+                                {this.renderStar(3)}
+                                {this.renderStar(2)}
+                                {this.renderStar(1)}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </a>
+                {this.state.modalIsOpen &&
+                    <GameModal
+                        isOpen={this.state.modalIsOpen}
+                        closeModal={() => this.switchModal(false)}
+                        title={this.props.title}
+                        description={this.props.description}
+                        imageURL={this.props.imageURL}
+                        content={this.props.content}
+                />}
+            </div>
         );
     }
 }

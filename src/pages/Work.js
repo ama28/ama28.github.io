@@ -32,7 +32,7 @@ class Work extends Component {
             return <ProjectSquare
                         key={idx}
                         filterMode={this.state.filterMode}
-                        backgroundImgURL={item.backgroundImgURL}
+                        imageURL={item.imageURL}
                         title={item.title}
                         skills={item.skills}
                         category={item.category}/>

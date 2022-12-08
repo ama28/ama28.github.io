@@ -1,5 +1,13 @@
 import { Component } from 'react';
 import '../App.css';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+    useRouteMatch,
+    useParams
+  } from "react-router-dom";
 
 class ProjectSquare extends Component {
     constructor(props){
@@ -38,12 +46,12 @@ class ProjectSquare extends Component {
 
     render() {
         const squareStyle = {
-            backgroundImage: this.props.backgroundImgURL,
+            backgroundImage: this.props.imageURL,
             backgroundPosition: 'center center',
         }
         return (
             this.checkIfShouldBeRendered() ?
-                <a href='' onMouseOver={this.onHovering} onMouseOut={this.offHovering}>
+                <Link to='/spin' onMouseOver={this.onHovering} onMouseOut={this.offHovering}>
                     <div className='projectContainer dropShadow'>
                         <div className={`projectSquare ${this.state.hovering ? 'zoomed' : ''}`} style={squareStyle}>
                             <div className={`projectOverlayContainer ${this.state.hovering ? 'visible' : ''}`}>
@@ -56,7 +64,7 @@ class ProjectSquare extends Component {
                             </div>
                         </div>
                     </div>
-                </a> : null
+                </Link> : null
         );
     }
 }

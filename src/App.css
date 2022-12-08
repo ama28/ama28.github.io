@@ -69,11 +69,7 @@ h1 {
 
 h3 {
   margin-top: 40px;
-  margin-bottom: 10px;
-}
-
-br {
-  margin-top: 2em;
+  margin-bottom: 0px;
 }
 
 /* ================= Cool Animations Found Online =================*/
@@ -168,12 +164,11 @@ a.currentNavButton {
 
   border-bottom: white 3px solid;
   padding-bottom: 8px;
-  transition: padding-bottom 0.5s, border-bottom 0.5s;
+  transition: padding-bottom 0.5s;
 }
 
 a.currentNavButton.small {
-  padding-bottom: 4px;
-  border-bottom: white 1.5px solid;
+  padding-bottom: 6px;
 }
 
 /* ================= Intro Header Styles =================*/
@@ -304,6 +299,12 @@ select option {
   gap: 40px;
 }
 
+/* dynamically make this apply if # of projects is a multiple of 3-1 */
+.projectGridContainer::after {
+  content: "";
+  width: 400px;
+}
+
 .projectGridContainer a {
   flex-grow: 1;
   max-width: 400px;
@@ -316,7 +317,7 @@ select option {
 .projectSquare {
   width: 100%;
   padding-top: 80%;
-  background-color: white;
+  background-color: darkslategray;
   position: relative;
   background-size: 100%;
   transition: background-size 0.5s;
@@ -576,13 +577,13 @@ select option {
   flex-direction: column;
 }
 
-a.gamePostLink {
+.gamePostLink {
   text-decoration: none;
   max-width: 350px;
   transition: transform 0.3s;
 }
 
-a.gamePostLink.enlarged {
+.gamePostLink.enlarged {
   transform: scale(1.05);
 }
 
@@ -614,7 +615,7 @@ a.gamePostLink.enlarged {
 .gameTitle {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .gameReview {
@@ -682,14 +683,12 @@ a.gamePostLink.enlarged {
 .modalHeader {
   width: 100%;
   object-fit: cover;
-  object-position: 0px 8%;
-  height: 400px;
+  max-height:550px;
   border-radius: 10px 10px 0px 0px;
-  border-bottom: 3px solid lightgray;
 }
 
 .modalContent {
-  padding: 50px 150px 120px 150px;
+  padding: 50px 150px 80px 150px;
   color: darkslategray;
   line-height: 1.5em;
   font-size: 18px;
