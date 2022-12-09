@@ -22,7 +22,7 @@ class AboutMe extends Component {
                 },
                 {
                     key: 2,
-                    url: `${process.env.PUBLIC_URL + "/assets/images/IMG_0299.jpg"}`
+                    url: `${process.env.PUBLIC_URL + "/assets/images/IMG_0299.JPG"}`
                 },
                 {
                     key: 3,
@@ -112,7 +112,7 @@ class AboutMe extends Component {
                             <div className='galleryLeft'>
                                 {this.renderGalleryPreview()}
                             </div>
-                            <img src={`${process.env.PUBLIC_URL + "/assets/images/dungeonp_screen.png"}`} className="dropShadow" alt='an example of my artwork'></img>
+                            <img src={`${process.env.PUBLIC_URL + "/assets/images/DungeonP_screen.png"}`} className="dropShadow" alt='an example of my artwork'></img>
                         </div>
 
                         <Link to='/games' className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
