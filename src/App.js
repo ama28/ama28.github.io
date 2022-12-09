@@ -181,7 +181,7 @@ class App extends Component {
           {/* A <Routes> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Routes>
-            <Route path="/" element={<Work projects={this.state.projects}/>}/>
+            <Route path="/react-portfolio" element={<Work projects={this.state.projects}/>}/>
             <Route path="/about" element={<AboutMe gamePosts={this.state.gamePosts}/>}/>
             <Route path="/games" element={<Games gamePosts={this.state.gamePosts}/>}/>
             <Route path="/archive" element={<Archive archivedProjects={this.state.archivedProjects}/>}/>
