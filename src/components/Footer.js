@@ -29,7 +29,7 @@ class Footer extends Component {
                             </div>
                         </div>
                         <div className='footerInternalLinks'>
-                            <Link to='/react-portfolio'>WORK</Link>
+                            <Link to='/'>WORK</Link>
                             <Link to='/about'>ABOUT</Link>
                             <Link to='/archive'>ARCHIVE</Link>
                             <Link to='/'>BLOG</Link>
