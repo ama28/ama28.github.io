@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.4a881599.css",
+    "main.js": "/react-portfolio/static/js/main.75937160.js",
+    "static/js/787.e403dcb9.chunk.js": "/react-portfolio/static/js/787.e403dcb9.chunk.js",
+    "static/media/Montserrat-LightItalic.ttf": "/react-portfolio/static/media/Montserrat-LightItalic.d79f80a4862fa88db7c2.ttf",
+    "static/media/Montserrat-Regular.ttf": "/react-portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/Montserrat-Bold.ttf": "/react-portfolio/static/media/Montserrat-Bold.079ca05d3ded9bc107ab.ttf",
+    "static/media/Montserrat-SemiBold.ttf": "/react-portfolio/static/media/Montserrat-SemiBold.fa8441f345d83a0bc4ec.ttf",
+    "static/media/Montserrat-Medium.ttf": "/react-portfolio/static/media/Montserrat-Medium.e2d60bc49517598c0ce8.ttf",
+    "static/media/Montserrat-ExtraLight.ttf": "/react-portfolio/static/media/Montserrat-ExtraLight.62a749ca2820713ebbf8.ttf",
+    "static/media/Montserrat-Light.ttf": "/react-portfolio/static/media/Montserrat-Light.02afb26fe72fcc052988.ttf",
+    "static/media/GamePosts.csv": "/react-portfolio/static/media/GamePosts.9fb7f4f13415b512eb0d.csv",
+    "index.html": "/react-portfolio/index.html",
+    "static/media/Projects.csv": "/react-portfolio/static/media/Projects.b399b28c75638fa16fab.csv",
+    "main.4a881599.css.map": "/react-portfolio/static/css/main.4a881599.css.map",
+    "main.75937160.js.map": "/react-portfolio/static/js/main.75937160.js.map",
+    "787.e403dcb9.chunk.js.map": "/react-portfolio/static/js/787.e403dcb9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a881599.css",
+    "static/js/main.75937160.js"
+  ]
+}
