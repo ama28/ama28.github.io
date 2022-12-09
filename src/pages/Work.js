@@ -20,6 +20,7 @@ class Work extends Component {
         }
     }
 
+    /* Changes filter mode which determines what projects are shown and in what order */
     switchFilterMode = (event) => {
         this.setState(prevState => ({
             ...prevState,

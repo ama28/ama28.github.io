@@ -11,6 +11,7 @@ class GamePost extends Component {
         }
     }
 
+    /* check if an item should be rendered based on the filter mode */
     checkIfShouldBeRendered = () => {
         switch (this.props.filterMode) {
             case "Highest Rating":
@@ -22,6 +23,7 @@ class GamePost extends Component {
         }
     }
 
+    /* opens and closes the corresponding modal containing the blog post for this entry*/
     switchModal = (state) => {
         state ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible"
         this.setState(prevState => ({
@@ -30,6 +32,7 @@ class GamePost extends Component {
         }))
     }
 
+    /* changes state indicator to hovering */
     onHovering = () => {
         this.setState((prevState) => ({
             ...prevState,
@@ -37,6 +40,7 @@ class GamePost extends Component {
         }))
     }
 
+    /* changes state indicator to not hovering */
     offHovering = () => {
         this.setState((prevState) => ({
             ...prevState,
@@ -44,11 +48,12 @@ class GamePost extends Component {
         }))
     }
 
+    /* draws out stars based off of the rating for the post */
     renderStar(index) {
         if (this.props.starCount >= index)
-            return <img src={process.env.PUBLIC_URL + "/assets/icons/yellow_star.svg"}></img>;
+            return <img src={process.env.PUBLIC_URL + "/assets/icons/yellow_star.svg"} alt='a yellow rating star'></img>;
         else 
-            return <img src={process.env.PUBLIC_URL + "/assets/icons/gray_star.svg"}></img>
+            return <img src={process.env.PUBLIC_URL + "/assets/icons/gray_star.svg"} alt='a gray empty rating star'></img>
     }
 
     render () {
@@ -57,10 +62,13 @@ class GamePost extends Component {
                 <div onClick={() => this.switchModal(true)} className={`gamePostLink dropShadow ${this.state.hovering ? 'enlarged' : ''}`} 
                      onMouseOver={() => this.onHovering()} onMouseOut={() => this.offHovering()}>
                     <div className='gameCardBack'>
+                        {/* ========== Cover Image for the Post ========== */}
                         <div className='headerImage'>
-                            <img src={this.props.imageURL}></img>
+                            <img src={this.props.imageURL} alt='a preview image of the game being reviewed'></img>
                         </div>
+                        {/* ========== Rest of the Card that Contains Content and Rating ========== */}
                         <div className='gameCardDetailsContainer'>
+                             {/* ------ Text Content ------ */}
                             <div className='gameCardDescriptionContainer'>
                                 <div className='gameTitle'>{this.props.title}</div>
                                 <div className='gameReview'>
@@ -68,6 +76,7 @@ class GamePost extends Component {
                                     {this.props.description}
                                 </div>
                             </div>
+                            {/* ------ Star Rating Display ------ */}
                             <div className='gameRating'>
                                 {this.renderStar(5)}
                                 {this.renderStar(4)}
@@ -78,6 +87,7 @@ class GamePost extends Component {
                         </div>
                     </div>
                 </div>
+                {/* ========== Blog Post Modal that Shows When Item is Clicked ========== */}
                 {this.state.modalIsOpen &&
                     <GameModal
                         isOpen={this.state.modalIsOpen}

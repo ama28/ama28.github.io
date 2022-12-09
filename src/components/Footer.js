@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 class Footer extends Component {
@@ -16,24 +17,24 @@ class Footer extends Component {
                                 or even to just talk about games!
                             </div>
                             <div className='footerExternalLinks'>
-                                <a href=''>
-                                    <img src={process.env.PUBLIC_URL + "/assets/icons/itch_icon.svg"}></img>
-                                </a>
-                                <a href=''>
-                                    <img src={process.env.PUBLIC_URL + "/assets/icons/linkedin_icon.svg"}></img>
-                                </a>
-                                <a href=''>
-                                    <img src={process.env.PUBLIC_URL + "/assets/icons/email_icon.svg"}></img>
-                                </a>
+                                <Link to=''>
+                                    <img src={process.env.PUBLIC_URL + "/assets/icons/itch_icon.svg"} alt='itch icon'></img>
+                                </Link>
+                                <Link to=''>
+                                    <img src={process.env.PUBLIC_URL + "/assets/icons/linkedin_icon.svg"} alt='linkedin icon'></img>
+                                </Link>
+                                <Link to=''>
+                                    <img src={process.env.PUBLIC_URL + "/assets/icons/email_icon.svg"} alt='email icon'></img>
+                                </Link>
                             </div>
                         </div>
                         <div className='footerInternalLinks'>
-                            <a href=''>WORK</a>
-                            <a href=''>ABOUT</a>
-                            <a href=''>ARCHIVE</a>
-                            <a href=''>BLOG</a>
-                            <a href=''>GALLERY</a>
-                            <a href=''>GAMES</a>
+                            <Link to='/'>WORK</Link>
+                            <Link to='/about'>ABOUT</Link>
+                            <Link to='/archive'>ARCHIVE</Link>
+                            <Link to='/'>BLOG</Link>
+                            <Link to='/'>GALLERY</Link>
+                            <Link to='/games'>GAMES</Link>
                         </div>
                     </div>
                     <div className='footerCopyrightContainer'>

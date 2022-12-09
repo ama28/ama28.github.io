@@ -17,6 +17,7 @@ class ProjectSquare extends Component {
         }
     }
 
+    /* changes state to indicate hovering */
     onHovering = () => {
         this.setState((prevState) => ({
             ...prevState,
@@ -24,6 +25,7 @@ class ProjectSquare extends Component {
         }))
     }
 
+    /* changes state to indicate not hovering */
     offHovering = () => {
         this.setState((prevState) => ({
             ...prevState,
@@ -31,6 +33,7 @@ class ProjectSquare extends Component {
         }))
     }
 
+    /* check if an item should be rendered based on the filter mode */
     checkIfShouldBeRendered = () => {
         switch (this.props.filterMode) {
             case "All":

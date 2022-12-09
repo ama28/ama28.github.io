@@ -11,6 +11,7 @@ class Games extends Component {
         }
     }
 
+    /* Changes filter mode which determines what order posts are shown in */
     switchFilterMode = (event) => {
         this.setState(prevState => ({
             ...prevState,
@@ -18,6 +19,7 @@ class Games extends Component {
         }))
     }
 
+    /* Renders posts from most recent to least */
     renderInOrder() {
         return this.props.gamePosts.map((item, idx) => {
             return <GamePost
@@ -31,6 +33,7 @@ class Games extends Component {
         })
     }
 
+    /* Renders posts high to low or low to high based on rating and the input boolean */
     renderByRating(starRating) {
         return this.props.gamePosts.map((item, idx) => {
             if (item.starCount == starRating)
@@ -46,6 +49,7 @@ class Games extends Component {
         })
     }
 
+    /* Renders posts based on the current filter mode */
     renderPosts(filterMode) {
         switch (filterMode) {
             case "Recent":

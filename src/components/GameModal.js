@@ -1,16 +1,36 @@
 import React from "react";
 import '../App.css';
 
-const MODAL_STYLE = {
-  position: "absolute",
-  backgroundColor: "#FFF",
-  display: 'flex',
-  flexDirection: 'column',
-  zIndex: "1000",
-  width: "70vw",
-  top: "10%",
-  borderRadius: "10px",
-};
+/* Returns the style the modal should follow based off screen size */
+const findModalStyle = () => {
+  if (window.matchMedia("(max-width: 600px)").matches)
+    return {
+      position: "absolute",
+      backgroundColor: "#FFF",
+      display: 'flex',
+      flexDirection: 'column',
+      zIndex: "1000",
+      width: "100vw",
+      top: "10%",
+      borderRadius: "10px",
+  }
+  else return {
+      position: "absolute",
+      backgroundColor: "#FFF",
+      display: 'flex',
+      flexDirection: 'column',
+      zIndex: "1000",
+      width: "70vw",
+      top: "10%",
+      borderRadius: "10px",
+  }
+}
+
+/* Styles for the modal itself */
+const MODAL_STYLE = findModalStyle();
+
+/* Styles for the overlay that will darken the background and bring 
+   focus to the modal */
 const OVERLAY_STYLE = {
   position: "fixed",
   display: "flex",
@@ -24,48 +44,67 @@ const OVERLAY_STYLE = {
   overflowY: "auto",
 };
 
+/* Styles for a spacer that will add a margin to the bottom of the modal */
 const SPACER_STYLE = {
   height: '100px',
   margin: '0 0 -100px 0',
 }
 
 export default function GameModal(props) {
+  //return null is the modal should not be open
   if (!props.isOpen) return null;
 
+  //function to prevent click behavior from parent elements from applying to element calling it
   const handleChildElementClick = (e) => {
-    // props.closeModal()
     e.stopPropagation()
   }
   
+  /* Renders all of the content of the blog post */
   const renderArticle = () => {
     return props.content?.map((item, idx) => {
       let paragraphArray = "";
-      if (item[1] != null) paragraphArray = item[1].split('\\break')
+      if (item[1] != null) paragraphArray = item[1].split('\\break') //breaks content into paragraphs inputted as "\break" in the csv
       return <div key={idx}><h3>{item[0]}</h3>{renderParagraphs(paragraphArray)}</div>
     })
   }
 
+  /* renders paragraphs that have been delineated by \breaks */
   const renderParagraphs = (paragraphArray) => {
+    //is there is only one paragraph just return it
     if (paragraphArray.length < 2) return renderImages(paragraphArray[0])
 
+    //if there is more than one paragraph split them into separate elements
     return paragraphArray?.map ((paragraph, idx) => {
       return <div key={idx}>{renderImages(paragraph)}</div>
     })
   }
 
-  // /\w+\.\w+/
+  /* renders sections of paragraphs that have been delineated by images */
   const renderImages = (brokenParagraph) => {
-    let images = brokenParagraph?.match(/\/\w+\/\w+\/\w+\.\w+/)
-    let sectionsSplitByImage = brokenParagraph?.split(/\/\w+\/\w+\/\w+\.\w+/)
+    //regex for finding an image in the format /assets/images/__.jpg or png or svg or jpeg
+    const imgRegex = /\/\w+\/\w+\/\w+\.\w+/g
 
-    if (sectionsSplitByImage == null || images == null) return <p>{sectionsSplitByImage}</p>
+    /* sections delineated by image urls in the scv, each section string begins with a string representing 
+       the URL for the image that should precede it */
+    let sectionsSplitByImage = brokenParagraph?.split(/(?=\/\w+\/\w+\/\w+\.\w+)/g) 
 
+    //if there are no images return the element
+    if (sectionsSplitByImage == null) return <p>{sectionsSplitByImage}</p>
+
+    //go through each section and render it followed by the next image until you reach the end
     let result = [];
-    for (let i=0; i < images.length; i++)
+    for (let i=0; i < sectionsSplitByImage.length; i++)
     {
-       result.push(<div><p>{sectionsSplitByImage[i]}</p><img src={process.env.PUBLIC_URL + images[i]}></img></div>)
+      let imageLink = ''
+      let content = sectionsSplitByImage[i]
+      //if there is an image url in the section, extract it into a variable (imageLink) then remove it from the original string
+      if (sectionsSplitByImage[i].match(imgRegex) != null) {
+        imageLink = <img src={process.env.PUBLIC_URL + sectionsSplitByImage[i].match(imgRegex)} alt='and screenshot from the game being reviewed'></img> 
+        content = sectionsSplitByImage[i].replace(/\S*.jpeg/, "").replace(/\S*.jpg/, "").replace(/\S*.svg/, "").replace(/\S*.png/, "")
+      }
+      //add an element containing an image and the section that follows to an array
+      result.push(<div key={i}>{imageLink}<p>{content}</p></div>)
     }
-    result.push(<p>{sectionsSplitByImage[sectionsSplitByImage.length-1]}</p>)
     return result;
   }
 
@@ -73,13 +112,13 @@ export default function GameModal(props) {
     <>
       <div style={OVERLAY_STYLE} onClick={() => props.closeModal()}>
         <div style={MODAL_STYLE} onClick={(e) => handleChildElementClick(e)}>
-          <img src={props.imageURL} className="modalHeader"></img>
-          {/* <button onClick={() => props.closeModal()}>Close Modal</button> */}
+          <img src={props.imageURL} className="modalHeader" alt='the cover art for the game being reviewed'></img>
           <div className="modalContent">
             <h1>{props.title}</h1>
             <p>{props.description}</p>
             {renderArticle()}
           </div>
+          <button className="closeModal" onClick={() => props.closeModal()}>CLOSE</button>
           <div style={SPACER_STYLE}></div>
         </div>
       </div>

@@ -72,6 +72,8 @@ h3 {
   margin-bottom: 0px;
 }
 
+
+
 /* ================= Cool Animations Found Online =================*/
 
 /* Shutter Out Horizontal */
@@ -164,11 +166,7 @@ a.currentNavButton {
 
   border-bottom: white 3px solid;
   padding-bottom: 8px;
-  transition: padding-bottom 0.5s;
-}
-
-a.currentNavButton.small {
-  padding-bottom: 6px;
+  /* transition: padding-bottom 0.5s; */
 }
 
 /* ================= Intro Header Styles =================*/
@@ -698,4 +696,194 @@ select option {
 .modalContent img {
   width: 100%;
   margin: 20px 0px;
+}
+
+.closeModal {
+  align-self: center;
+  width: 50%;
+  height: 50px;
+  margin-bottom: 80px;
+  background: transparent;
+  border: 1px solid black;
+}
+
+/* ================= Mobile Styles =================*/
+@media only screen and (max-width: 600px) {
+  /* ----- Global -----*/
+  html, body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ----- Intro Excerpts -----*/
+  .introContainer {
+    width: 80vw;
+  }
+
+  .introDescription {
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  /* ----- Nav Bar -----*/
+  .navContainer {
+    padding: 30px 40px;
+  }
+
+  .navContainer.filled {
+    padding: 30px 40px;
+  }
+
+  .navButtonsContainer a {
+    margin: 0px 20px;
+  }
+
+  /* ----- Project Grid -----*/
+  .workContentContainer {
+    margin: 30px 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectGridContainer {
+    justify-content: center;
+  }
+
+  .projectGridContainer::after {
+    content: none;
+  }
+
+  .projectGridContainer a {
+    max-width: 300px;
+  }
+
+  .projectContainer {
+    min-width: 200px;
+    margin: 0px;
+  }
+
+  /* ----- Footer -----*/
+  .footerBackground {
+    padding: 50px 50px;
+  }
+
+  .contactInfo {
+    width: 100%;
+  }
+
+  .footerContentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .footerInternalLinks {
+    display: none;
+  }
+
+  .footerExternalLinks img {
+    display: none;
+  }
+
+  /* ----- About Me Header -----*/
+  .aboutHeaderContainer {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .aboutDetailsContainer {
+    width: 80vw;
+    height: auto;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .aboutHeader {
+    justify-content: center;
+    padding: 0px;
+  }
+
+  .aboutHeaderContainer > img {
+    display: none;
+  }
+
+  .aboutTitle {
+    font-size: 32px;;
+    padding: 0px;
+  }
+
+  .aboutDescription {
+    font-size: 16px;
+  }
+
+  .aboutLinks {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin-top: 20px;
+  }
+
+  .aboutLinks img {
+    width: 60px;
+  }
+
+  /* ----- About Me Game Corner and Gallery Callouts -----*/
+  .otherWork {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+    border: none;
+  }
+
+  .aboutCallout {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .aboutCalloutGallery {
+    flex-direction: column;
+  }
+
+  .aboutCalloutGallery > img {
+    margin-left: 0px;
+    width: 60vw;
+    height: auto;
+  };
+
+  .aboutCallout > div > img {
+    display: none;
+  }
+
+  .aboutCalloutGallery div {
+    display: none;
+  }
+
+  .gameCardBack {
+    max-width: 100%;
+  }
+
+  .workContentContainer.games {
+    margin: 40px 50px;
+  }
+
+  /* ----- Game Post Modal -----*/
+  .modalContent {
+    padding: 20px 0px;
+    width: 100%;
+  }
+
+  .modalContent img {
+    width: 80%;
+    margin: auto;
+  }
 }

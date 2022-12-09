@@ -52,12 +52,32 @@ class App extends Component {
             skills:'RESEARCH · PROGRAMMING',
             category: {design: false, games: true, research: true}
         },
+        {
+          backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/c1.png')`,
+          title:'Design Internship Program',
+          skills:'UX DESIGN · UX RESEARCH',
+          category: {design: true, games: false, research: true}
+        },
+        {
+            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/escape_dartist.svg')`,
+            title:'Escape Dartist VR',
+            skills:'GAME DESIGN · LEVEL DESIGN · XR · 3D ART',
+            category: {design: false, games: true, research: false}
+        },
+        {
+            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/channel.png')`,
+            title:'Channel',
+            skills:'GAME DESIGN · PROGRAMMING',
+            category: {design: false, games: true, research: false}
+        },
       ],
     }
     this.updateGameData = this.updateGameData.bind(this)
     this.updateProjectData = this.updateProjectData.bind(this)
   }
 
+  /* Changes background when switching a page 
+    (not currently in use — all pages have the same background) */
   switchPage = (backgroundURL, nextPage) => {
     this.setState(prevState => ({
       ...prevState,
@@ -66,6 +86,7 @@ class App extends Component {
     }))
   }
 
+  /* Parse through the two csv files upon startup */
   componentDidMount() {
     Papa.parse(GamePosts, {
       download: true,
@@ -82,6 +103,7 @@ class App extends Component {
     });
   }
 
+  /* Filter data from the parsed projects csv into the projects state variable*/
   updateProjectData(result) {
     const data = result.data.map((project, idx) => {
       return {
@@ -98,17 +120,24 @@ class App extends Component {
     this.setState({projects: data});
   }
 
+  /* Helper function for updateGameData: reformats any image entry in the csv in the form, 
+     __.jpg/jpeg/svg/png to the format necessary to find the source file in the project */
   formatImages(inputString) {
-    inputString.replace(/\w*.jpg\b/, "<img src={process.env.PUBLIC_URL + '/assets/images/$&'}></img>")
-    inputString.replace(/\w*.svg\b/, "<img src={process.env.PUBLIC_URL + '/assets/images/$&'}></img>")
-    inputString.replace(/\w*.png\b/, "<img src={process.env.PUBLIC_URL + '/assets/images/$&'}></img>")
-    inputString.replace(/\w*.jpeg\b/, "<img src={process.env.PUBLIC_URL + '/assets/images/$&'}></img>")
+    let temp = inputString
+    temp = temp.replace(/\w*.jpg\b/, '/assets/images/$&')
+    temp = temp.replace(/\w*.svg\b/, '/assets/images/$&')
+    temp = temp.replace(/\w*.png\b/, '/assets/images/$&')
+    temp = temp.replace(/\w*.jpeg\b/, '/assets/images/$&')
+    return temp;
   }
 
+  /* Helper function for updateGameData: combines headers and sections into a 2D array 
+     where each index is an array of size 2 containing a header and its corresponding section */
   to2Darray(headers, sections) {
     let headerArray = headers.split(', ');
-    let sectionsWithImages = sections.replace(/\w*.jpg\b/, '/assets/images/$&')
-    let sectionArray = sectionsWithImages.split('\\section ')
+
+    let sectionsWithImages = this.formatImages(sections)
+    let sectionArray = sectionsWithImages.split('\\section ') //sections are delimited by "\section" in the csv
 
     let result = [];
     for ( let i = 0; i < headerArray.length; i++ ) {
@@ -116,7 +145,8 @@ class App extends Component {
     }
     return result;
   }
-
+  
+  /* Filter data from the parsed game posts csv into the gamePosts state variable*/
   updateGameData(result) {
     const data = result.data.map((post, idx) => {
       return {
@@ -131,8 +161,9 @@ class App extends Component {
   }
   
   render() {
+    // storing a style for the background here so that switchPage can alter it if necessary
     const backgroundStyle = {
-      backgroundImage: this.state.background,
+      backgroundImage: `url('${process.env.PUBLIC_URL}/assets/images/darkened_background.jpg')`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
@@ -146,7 +177,7 @@ class App extends Component {
           <NavBar 
             switchPage={this.switchPage.bind(this)}
             currentPage={this.state.currentPage}/>
-
+          
           {/* A <Routes> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Routes>
@@ -155,9 +186,9 @@ class App extends Component {
             <Route path="/games" element={<Games gamePosts={this.state.gamePosts}/>}/>
             <Route path="/archive" element={<Archive archivedProjects={this.state.archivedProjects}/>}/>
           </Routes>
-        </Router>
 
-        <Footer />
+          <Footer />
+        </Router>
       </div>
     );
   }
