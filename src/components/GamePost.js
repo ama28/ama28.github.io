@@ -96,6 +96,7 @@ class GamePost extends Component {
                         description={this.props.description}
                         imageURL={this.props.imageURL}
                         content={this.props.content}
+                        starCount={this.props.starCount}
                 />}
             </div>
         );

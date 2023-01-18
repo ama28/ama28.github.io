@@ -38,7 +38,7 @@ class Archive extends Component {
                 <PageHeader
                     currentPage='Archive'
                     title="Archived Projects"
-                    normalDescription="More projects that are old or smaller in scope. Some were completed through my coursework at Carnegie Mellon, others are just fun personal projects."
+                    normalDescription="A collection of older projects, personal projects, or some that are just smaller in scope!"
                 />
 
                 <div className='workContentContainer'>

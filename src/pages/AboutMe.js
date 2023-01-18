@@ -115,7 +115,7 @@ class AboutMe extends Component {
                             <img src={`${process.env.PUBLIC_URL + "/assets/images/DungeonP_screen.png"}`} className="dropShadow" alt='an example of my artwork'></img>
                         </div>
 
-                        <Link to='/games' className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
+                        <div className='rectButton small' style={{opacity: '40%'}}>UNDER CONSTRUCTION</div>
                     </div>
                 </div>
             </div>

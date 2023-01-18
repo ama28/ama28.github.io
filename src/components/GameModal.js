@@ -115,6 +115,7 @@ export default function GameModal(props) {
           <img src={props.imageURL} className="modalHeader" alt='the cover art for the game being reviewed'></img>
           <div className="modalContent">
             <h1>{props.title}</h1>
+            <h2 style={{fontWeight: '600'}}>Score: {props.starCount}/5</h2>
             <p>{props.description}</p>
             {renderArticle()}
           </div>
