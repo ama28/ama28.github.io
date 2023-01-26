@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import GamePost from '../components/GamePost';
+import NavBar from '../components/NavBar';
 import {
     BrowserRouter as Router,
     Routes,
@@ -43,6 +44,11 @@ class AboutMe extends Component {
     render() {
         return (
             <div>
+                <NavBar 
+                    switchPage={this.props.switchPage}
+                    currentPage={this.props.currentPage}
+                    alwaysWhite={false}/>
+
                 {/* ========== About Me Header ========== */}
                 <div className='aboutHeaderContainer'>
                     <img src={process.env.PUBLIC_URL + "/assets/images/profilepic.jpg"}  alt='profile picture of me'></img>

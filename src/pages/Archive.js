@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import PageHeader from '../components/PageHeader';
 import ProjectSquare from '../components/ProjectSquare';
+import NavBar from '../components/NavBar';
 
 class Archive extends Component {
     constructor(props) {
@@ -34,6 +35,11 @@ class Archive extends Component {
     render() {
         return(
             <div>
+                <NavBar 
+                    switchPage={this.props.switchPage}
+                    currentPage={this.props.currentPage}
+                    alwaysWhite={false}/>
+
                 {/* ========== Header for Archive Page ========== */}
                 <PageHeader
                     currentPage='Archive'

@@ -14,7 +14,7 @@ class Footer extends Component {
                             </div>
                             <div className='footerDescription'>
                                 Contact me for jobs, opportunities for collaboration, design discussions, 
-                                or even to just talk about games!
+                                or just to talk about games!
                             </div>
                             <div className='footerExternalLinks'>
                                 <Link to=''>

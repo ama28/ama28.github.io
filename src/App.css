@@ -67,6 +67,10 @@ h1 {
   margin-bottom: 30px;
 }
 
+h2 {
+  color:#FF5757;
+}
+
 h3 {
   margin-top: 40px;
   margin-bottom: 0px;
@@ -136,7 +140,8 @@ h3 {
 
 .navContainer.filled {
   padding: 30px 90px 26px 90px;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom: 4px solid lightgray;
 }
 
 .navButtonsContainer {
@@ -145,7 +150,7 @@ h3 {
 }
 
 .navButtonsContainer a {
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, 1);
   text-decoration: none;
   margin: 0px 30px;
   font-size: 18px;
@@ -153,20 +158,29 @@ h3 {
   transition: color 0.3s;
 }
 
+.navButtonsContainer a.darkFont {
+  color: darkslategray;
+}
+
 .navButtonsContainer a.lastRight {
   margin-right: 0px;
 }
 
 .navButtonsContainer a:hover {
-  color: rgba(255, 255, 255, 1);
+  /* color: rgba(255, 255, 255, 1); */
 }
 
 a.currentNavButton {
   color: rgba(255, 255, 255, 1);
 
   border-bottom: white 3px solid;
-  padding-bottom: 8px;
-  /* transition: padding-bottom 0.5s; */
+  padding-bottom: 6px;
+  margin-bottom: -5px;
+}
+
+a.currentNavButton.dark {
+  color: black;
+  border-bottom-color: darkslategrey;
 }
 
 /* ================= Intro Header Styles =================*/
@@ -224,6 +238,7 @@ a.currentNavButton {
   width: auto;
   margin: 40px 90px;
   gap: 30px;
+  margin-bottom: 100px;
 }
 
 /* ================= Filter Button Styles =================*/
@@ -402,7 +417,6 @@ select option {
   width: auto;
   background-color: #232323;
   padding: 55px 90px;
-  margin-top: 100px;
 }
 
 .footerContainer {
@@ -525,7 +539,7 @@ select option {
 .otherWork {
   display: flex;
   justify-content: space-around;
-  margin: 0px 90px;
+  margin: 0px 90px 100px 90px;
   border-top: 2px solid white;
 }
 
@@ -563,6 +577,13 @@ select option {
   padding: 5px 30px;
   margin: 20px auto;
   border: 3px solid white;
+}
+
+.rectButton.medium {
+  font-size: 18px;
+  padding: 8px 30px;
+  margin: 20px auto;
+  border: 3.5px solid white;
 }
 
 /* ================= Game Review Card Styles =================*/
@@ -707,7 +728,7 @@ select option {
   border: 1px solid black;
 }
 
-/* ================= Mobile Styles =================*/
+/* ================================== MOBILE STYLES ==================================*/
 @media only screen and (max-width: 600px) {
   /* ----- Global -----*/
   html, body {

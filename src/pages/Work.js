@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import ProjectSquare from '../components/ProjectSquare';
 import PageHeader from '../components/PageHeader';
+import NavBar from '../components/NavBar';
 import {
     BrowserRouter as Router,
     Routes,
@@ -50,6 +51,11 @@ class Work extends Component {
 
         return(
             <div>
+                <NavBar 
+                    switchPage={this.props.switchPage}
+                    currentPage={this.props.currentPage}
+                    alwaysWhite={false}/>
+
                 {/* ========== Introduction at the Top of the Work Page ========== */}
                 <PageHeader 
                     styledDescription={description}/>

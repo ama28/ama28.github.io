@@ -54,7 +54,7 @@ class ProjectSquare extends Component {
         }
         return (
             this.checkIfShouldBeRendered() ?
-                <Link to='/spin' onMouseOver={this.onHovering} onMouseOut={this.offHovering}>
+                <Link to='/project' onMouseOver={this.onHovering} onMouseOut={this.offHovering}>
                     <div className='projectContainer dropShadow'>
                         <div className={`projectSquare ${this.state.hovering ? 'zoomed' : ''}`} style={squareStyle}>
                             <div className={`projectOverlayContainer ${this.state.hovering ? 'visible' : ''}`}>

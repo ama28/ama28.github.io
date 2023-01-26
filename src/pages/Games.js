@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import GamePost from '../components/GamePost';
 import PageHeader from '../components/PageHeader';
+import NavBar from '../components/NavBar';
 
 class Games extends Component {
     constructor(props) {
@@ -72,6 +73,11 @@ class Games extends Component {
     render() {
         return (
             <div>
+                <NavBar 
+                    switchPage={this.props.switchPage.bind(this)}
+                    currentPage={this.props.currentPage}
+                    alwaysWhite={false}/>
+
                 {/* ========== Header for Games Page ========== */}
                 <PageHeader
                     currentPage={this.props.currentPage}

@@ -27,19 +27,19 @@ export default function NavBar(props) {
         }
     }, []);
 
-    const currentButtonStyle = `currentNavButton ${filled ? "small" : ""}`
+    const currentButtonStyle = `currentNavButton ${(filled || props.alwaysWhite) ? "small dark" : ""}`
 
     return (
-        <div className={`navContainer ${filled ? "filled" : ""}`}>
+        <div className={`navContainer ${(filled || props.alwaysWhite) ? "filled" : ""}`}>
              {/* ========== Home Icon ========== */}
             <Link to='/' onClick={() => props.switchPage(`url('${process.env.PUBLIC_URL}/assets/images/background.jpg')`, 'Work')}>
-                <img src={process.env.PUBLIC_URL + "/assets/icons/mylogo.png"} width={"55px"} alt='my branding logo'/>
+                <img src={`${(filled || props.alwaysWhite) ? `${process.env.PUBLIC_URL + "/assets/icons/mylogo_dark.png"}` : `${process.env.PUBLIC_URL + "/assets/icons/mylogo.png"}`}`} width={"55px"} alt='my branding logo'/>
             </Link>
             {/* ========== Buttons for Pages ========== */}
             <div className="navButtonsContainer">
-                <Link to="/" className={props.currentPage == 'Work' ? currentButtonStyle : ''}
+                <Link to="/" className={`${props.currentPage == 'Work' ? currentButtonStyle : ''} ${(filled || props.alwaysWhite) ? "darkFont" : " "}`}
                 onClick={() => props.switchPage(`url('${process.env.PUBLIC_URL}/assets/images/background.jpg')`, 'Work')}>WORK</Link>
-                <Link to="/about" className={`${props.currentPage == 'About' ? currentButtonStyle : ''} lastRight`}
+                <Link to="/about" className={`${props.currentPage == 'About' ? currentButtonStyle : ''} lastRight ${(filled || props.alwaysWhite) ? "darkFont" : " "}`}
                 onClick={() => props.switchPage(`url('${process.env.PUBLIC_URL}/assets/images/darkened_background.jpg')`, 'About')}>ABOUT</Link>
             </div>
         </div>

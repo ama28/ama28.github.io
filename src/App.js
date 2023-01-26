@@ -17,6 +17,7 @@ import NavBar from './components/NavBar';
 import Papa from "papaparse";
 import GamePosts from './GamePosts.csv';
 import Projects from './Projects.csv';
+import ProjectPage from './pages/ProjectPage';
 
 class App extends Component {
   constructor(props) {
@@ -174,17 +175,18 @@ class App extends Component {
       <div style={backgroundStyle}>
         {/* ======= Navigation Router ======= */}
         <Router>
-          <NavBar 
+          {/* <NavBar 
             switchPage={this.switchPage.bind(this)}
-            currentPage={this.state.currentPage}/>
+            currentPage={this.state.currentPage}/> */}
           
           {/* A <Routes> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Routes>
-            <Route path="/" element={<Work projects={this.state.projects}/>}/>
-            <Route path="/about" element={<AboutMe gamePosts={this.state.gamePosts}/>}/>
-            <Route path="/games" element={<Games gamePosts={this.state.gamePosts}/>}/>
-            <Route path="/archive" element={<Archive archivedProjects={this.state.archivedProjects}/>}/>
+            <Route path="/" element={<Work projects={this.state.projects} switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/about" element={<AboutMe gamePosts={this.state.gamePosts} switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/games" element={<Games gamePosts={this.state.gamePosts} switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/archive" element={<Archive archivedProjects={this.state.archivedProjects} switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/project" element={<ProjectPage switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
           </Routes>
 
           <Footer />
