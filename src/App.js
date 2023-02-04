@@ -17,7 +17,11 @@ import NavBar from './components/NavBar';
 import Papa from "papaparse";
 import GamePosts from './GamePosts.csv';
 import Projects from './Projects.csv';
-import ProjectPage from './pages/ProjectPage';
+
+import DimensionalRift from './pages/projectPages/DimensionalRift';
+import Spin from './pages/projectPages/Spin';
+import C1 from './pages/projectPages/C1';
+import P3G from './pages/projectPages/P3G';
 
 class App extends Component {
   constructor(props) {
@@ -109,6 +113,7 @@ class App extends Component {
     const data = result.data.map((project, idx) => {
       return {
         title: project.title,
+        route: project.title.replace(/\s/g, ''),
         imageURL: `url(${process.env.PUBLIC_URL}/assets/images/` + project.imageURL + `)`,
         skills: project.skills,
         category: {
@@ -186,7 +191,12 @@ class App extends Component {
             <Route path="/about" element={<AboutMe gamePosts={this.state.gamePosts} switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             <Route path="/games" element={<Games gamePosts={this.state.gamePosts} switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             <Route path="/archive" element={<Archive archivedProjects={this.state.archivedProjects} switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
-            <Route path="/project" element={<ProjectPage switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            {/* projects */}
+            <Route path="/DimensionalRift" element={<DimensionalRift switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/DesignInternshipProgram" element={<C1 switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/Player-ProgrammedPartnerGames" element={<P3G switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/SpinDashboard" element={<Spin switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            {/* archive */}
           </Routes>
 
           <Footer />

@@ -36,6 +36,7 @@ class Work extends Component {
                         filterMode={this.state.filterMode}
                         imageURL={item.imageURL}
                         title={item.title}
+                        route={item.route}
                         skills={item.skills}
                         category={item.category}/>
         })
