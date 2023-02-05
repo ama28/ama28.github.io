@@ -22,7 +22,6 @@ export default class DimensionalRift extends Component {
           title="Dimensional Rift"
           description="An asymmetrical co-op game where two different game worlds collide!"
           imageURL={require('../../images/DR/DR_Header.jpg')}
-          links="itch github gcs"
           itchlink="https://adrianma.itch.io/dimensional-rift"
           githublink="https://github.com/ama28/Dimensional-Rift"
           gcslink="https://www.gamecreation.org/games/dimensional_rift"

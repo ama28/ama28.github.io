@@ -15,7 +15,6 @@ export default class P3G extends Component {
           title="Player-Programmed Partner Games"
           description="Addressing gaps in human-robotics interaction learning through educational game design"
           imageURL={require('../../images/p3gassets/coboxsample.png')}
-          links="website article"
           websitelink="https://www.cmu.edu/roboticsacademy/Research/p3g.html#:~:text=Player%2DProgrammed%20Partner%20Games%20(P3G)%20for%20Low%2DResource,robotics%20education%20up%20to%20date."
           articlelink="https://www.cmu.edu/roboticsacademy/news/cmra-news-2021/cobox_adrian.html"
           roles="Game Designer, Researcher"
