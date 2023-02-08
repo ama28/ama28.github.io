@@ -27,24 +27,6 @@ export default class C1 extends Component {
           imageURL={require('../../images/c1assets/c1header.png')}
           />
         
-        {/* USEFUL CLASSES */}
-        {/* 
-          sectionContainer : creates a rectangular box for a section of content
-          sectionContainer noTitle : adjusts margin if sectionContainer doesn't have a header
-
-          leftRow : horizontally distributes its child elements with left adjustment
-          row : horizontally distributes its child elements (images have a max-width of 50%)
-          row gallery : adds 30px spacing between elements 
-          row > img sameHeight : apply to child elements of a row to make them all the same height
-          row > img min : for images that should be constrained by minWidth
-
-          column : vertically distributes elements
-          column gallery : formatting for vertical image gallery
-
-          half : makes element 47% width of parent container
-          full : makes element the full width of parent container
-          center : centers child elements
-         */}
         <div className='contentContainer'>
           <div className='sectionContainer'>
             <h2 className='first'>Project 1: Pulse IA</h2>

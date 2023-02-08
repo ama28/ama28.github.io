@@ -23,11 +23,11 @@ export default class P3G extends Component {
           />
         <div className='contentContainer'>
           <div className='sectionContainer'>
-            <h2>summary</h2>
+            <h2>Summary</h2>
             <p>Player-Programmed Partner Games (P3G) for Low-Resource Learners is an Innovations in Development project that seeks to increase access to informal STEM education in out-of-school time (OST) settings, while simultaneously bringing the human-robotics interaction paradigms of robotics education up to date. It addresses gaps in existing robotics STEM education programs through Design-Based Research (DBR) into a video game-based OST learning experience that teaches coding and computational thinking in a natural co-robotics context.</p>
           </div>
           <div className='sectionContainer'>
-            <h2>my contributions</h2>
+            <h2>My Contributions</h2>
             <div className='row' style={{marginBottom: '0px'}}>
                 <div>
                     <h5>Sunlight</h5>

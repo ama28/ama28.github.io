@@ -28,14 +28,14 @@ export default class FitSaber extends Component {
           />
         <div className='contentContainer'>
           <div className='sectionContainer'>
-            <h2>summary</h2>
+            <h2>Summary</h2>
             <p>With the rapid growth of the field of immersive technology and the surge in people’s online presences with the onset of the pandemic, it is becoming increasingly important for us to understand how people think and function within virtual spaces. </p>
             <p> This research study aims to address this issue through the creation of FitSaber, a game inspired by the popular VR game Beat Saber but altered to fit the needs of this experiment, and has funding from Facebook Reality Labs and multiple CMU research grants, including the SURF grant I received personally for the development of the game’s tutorial in the summer of 2021. </p>
             <p> Data collection for the study is currently in progress. </p>
           </div>
 
           <div className='sectionContainer'>
-            <h2>overview</h2>
+            <h2>Research Process</h2>
             <p>Our study focuses on <b>two main research questions:</b> </p>
             <img style={{maxWidth: '85%'}} src={require('../../images/fitsaberassets/fitsabergoals.png')}></img>
             <div className='center'>

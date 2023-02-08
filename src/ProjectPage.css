@@ -40,6 +40,25 @@
   font-weight: 700;
 }
 
+{/* USEFUL CLASSES */}
+{/* 
+  sectionContainer : creates a rectangular box for a section of content
+  sectionContainer noTitle : adjusts margin if sectionContainer doesn't have a header
+
+  leftRow : horizontally distributes its child elements with left adjustment
+  row : horizontally distributes its child elements (images have a max-width of 50%)
+  row gallery : adds 30px spacing between elements 
+  row > img sameHeight : apply to child elements of a row to make them all the same height
+  row > img min : for images that should be constrained by minWidth
+
+  column : vertically distributes elements
+  column gallery : formatting for vertical image gallery
+
+  half : makes element 47% width of parent container
+  full : makes element the full width of parent container
+  center : centers child elements
+  */}
+
 /* ================= Global Styles =================*/
 
 .projectPage p {
@@ -80,6 +99,7 @@ li {
   font-size: 36px;
   margin-top: 20px;
   margin-bottom: 30px;
+  /* text-transform: lowercase; */
   color:#D66B6B;
 }
 
@@ -130,7 +150,7 @@ li {
   justify-content: center;
   height: 80vh;
   width: 100%;
-  margin-top: 7vh;
+  margin-top: 9vh;
 }
 
 .leftHalf {
@@ -146,8 +166,9 @@ li {
 }
 
 .projectOverview img {
-  width: 95%;
-  margin-bottom: 10px;
+  max-width: 90%;
+  /* max-height: 120px; */
+  margin-bottom: 20px;
 }
 
 .linksContainer .rectButton {
@@ -172,7 +193,7 @@ li {
 
 .rightHalf img {
   max-width: 80%;
-  max-height: 70%;
+  max-height: 80%;
 }
 
 /* ================= Content Styles =================*/
@@ -280,7 +301,6 @@ li {
 
 .row iframe {
   min-width: 47%;
-  padding-top: 40px;
 }
 
 .column {
@@ -305,6 +325,26 @@ li {
 .center {
   display: flex;
   justify-content: center;
+  text-align: center;
+  color: darkslategray;
+}
+
+.center span {
+  width: 70%;
+  font-weight: 300;
+}
+
+.blueBox {
+  color: #903BB6;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1.5px solid #903BB6;
+  border-radius: 7px;
+  padding: 30px;
+  margin: 0px 80px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 
 /* ================================== MOBILE STYLES ==================================*/
@@ -413,6 +453,11 @@ li {
 
   .column.gallery {
     max-width: 100%;
+  }
+
+  .blueBox {
+    padding: 20px;
+    margin: 0px;
   }
 }
 

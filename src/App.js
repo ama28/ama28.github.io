@@ -23,6 +23,9 @@ import Spin from './pages/projectPages/Spin';
 import C1 from './pages/projectPages/C1';
 import P3G from './pages/projectPages/P3G';
 import FitSaber from './pages/projectPages/FitSaber';
+import Amos from './pages/projectPages/Amos';
+import EscapeDartist from './pages/projectPages/EscapeDartist';
+import Eachday from './pages/projectPages/Eachday';
 
 class App extends Component {
   constructor(props) {
@@ -198,6 +201,9 @@ class App extends Component {
             <Route path="/Player-ProgrammedPartnerGames" element={<P3G switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             <Route path="/SpinDashboard" element={<Spin switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             <Route path="/FitSaber" element={<FitSaber switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/Amos" element={<Amos switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/EscapeDartistVR" element={<EscapeDartist switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/Eachday" element={<Eachday switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             {/* archive */}
           </Routes>
 

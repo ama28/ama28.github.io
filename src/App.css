@@ -313,10 +313,10 @@ select option {
 }
 
 /* dynamically make this apply if # of projects is a multiple of 3-1 */
-/* .projectGridContainer::after {
+.projectGridContainer::after {
   content: "";
-  width: 400px;
-} */
+  width: 390px;
+}
 
 .projectGridContainer a {
   flex-grow: 1;

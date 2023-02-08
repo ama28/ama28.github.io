@@ -27,19 +27,13 @@ export default class Spin extends Component {
           team="Gabriel Alvarez, Olivia Wu, Sophia Timko"
           />
 
-        {/* USEFUL CLASSES */}
-        {/* 
-          sectionContainer : creates a rectangular box for a section of content
-          full : makes an images take up the full width of a container
-          halfSplit : horizontally distributes its child elements (images have a max-width of 50%)
-         */}
         <div className='contentContainer'>
           <div className='sectionContainer'>
-            <h2>overview</h2>
+            <h2>Overview</h2>
             <p>For this project, my team was tasked with designing a data dashboard for spin employees to <b>account for the lack of a fast entry point for data analysis</b> at the company. In our final design, we determined what information would be most important to our end users and presented it through quickly comprehensible visualizations and seamless interactions. </p>          
           </div>
           <div className='sectionContainer'>
-            <h2>problem</h2>
+            <h2>Problem</h2>
             <p>To better understand our end users and manage the scope of our project, we performed background research and centered our design around the needs of two defined <b>personas.</b> Here is a quick overview of them: </p>
 
             <div className='row'>
@@ -49,7 +43,7 @@ export default class Spin extends Component {
                 <p><b>Kalen is a gig worker who travels around the city redistributing scooters to balance supply.</b> He also brings in scooters to charge them and to do minor repairs between redistributions. He currently is working this job while he looks for another full-time position. He is looking to maximize his ability to move scooters while also having enough downtime to <b>search for positions</b> while he is taking a break. Also, repairing scooters gets him a bonus in his pay. He tries to <b>make the most of each gas tank.</b></p>
               </div>
             </div>
-            <h6>Kalen's Pain Points</h6>
+            <h6 style={{marginBottom: '0px'}}>Kalen's Pain Points</h6>
             <img src={require('../../images/spinimages/kalenpainpoints.png')}></img>
             <div className='row'>
               <p>“I usually take the popular Downtown-East Liberty route. This is normally the most efficient one, but that is not always the case…”</p>
@@ -64,7 +58,7 @@ export default class Spin extends Component {
                 <p><b>Mia is data analyst at Spin Scooters.</b> She is tasked with understanding how well the scooter rollout in Pittsburgh is going. Her work will help the company determine <b>where, when and how to increase or decrease scooter service in the city.</b> She was recently promoted based on her data science acumen as well as her ability to tell stories with data. In her new role, she is <b>focusing more on connecting with the business aspects rather than just data analysis.</b></p>
               </div>
             </div>
-            <h6>Mia's Pain Points</h6>
+            <h6 style={{marginBottom: '0px'}}>Mia's Pain Points</h6>
             <img src={require('../../images/spinimages/miapainpoints.png')}></img>
             <div className='row'>
               <p>“Typically, I pull up multiple spreadsheets on the computer and printed documents to figure out Today’s status…”</p>
@@ -74,7 +68,7 @@ export default class Spin extends Component {
           </div>
 
           <div className='sectionContainer'>
-            <h2>process</h2>
+            <h2>Process</h2>
             <img src={require('../../images/spinimages/spinprocess.png')}></img>
             <p>We began our design process by creating <b>current and future state models</b> for our two personas to plan out the needs our product would address and the changes it would create. </p>
             <p> We then each brainstormed different options for data visualizations and <b>wireframed</b> ways to present them with a dashboard. </p>
@@ -82,7 +76,7 @@ export default class Spin extends Component {
           </div>
 
           <div className='sectionContainer'>
-            <h2>solution</h2>
+            <h2>Solution</h2>
             <img src={require('../../images/spinimages/spinsolution.png')}></img>
             <p><b>Our final dashboard focuses on the intersection between Kalen and Mia’s needs, while also accounting for their specific tasks.</b> </p>
             <h5>Kalen's Improved Journey</h5>
@@ -146,7 +140,6 @@ export default class Spin extends Component {
               <p>She can analyze trends and download presentation graphics immediately</p>
               <p>The map renders trends by time and location for her</p>
             </div>
-
           </div>
         </div>
       </div>

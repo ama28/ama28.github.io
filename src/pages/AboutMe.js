@@ -57,9 +57,8 @@ class AboutMe extends Component {
                             {/* ------ Title and Description ------ */}
                             <div className='aboutTitle'>Hi, I'm Adrian</div>
                             <div className='aboutDescription'>
-                                Sed ac lorem tempor, tempor elit ac, porttitor magna. Nunc tincidunt 
-                                lorem condimentum ante malesuada, non sodales turpis dapibus. lorem condimentum 
-                                ante malesuada, non sodales turpis dapibus.  
+                                <p>My goal is to design digital experiences that can leave a long-lasting impact on those who use them and to explore and develop new ways through which we can interact with technology. </p>
+                                <p>I'm currently a student at Carnegie Mellon University studying Cognitive Science, Human-Computer Interaction, Game Design, and Animation.</p>
                             </div>
                             {/* ------ Links to External Sites ------ */}
                             <div className='aboutLinks'>
