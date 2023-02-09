@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8facd48a.css",
-    "main.js": "/static/js/main.1e1bcf95.js",
+    "main.js": "/static/js/main.cd549c5d.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/KalenAddStop.mp4": "/static/media/KalenAddStop.4ff32391e513d8760be5.mp4",
     "static/media/gif.gif": "/static/media/gif.af7769770586991961bd.gif",
@@ -19,6 +19,7 @@
     "static/media/paces.gif": "/static/media/paces.439bd8738d86a48a81f3.gif",
     "static/media/amosquotes.svg": "/static/media/amosquotes.408bb48fa4f8ae77182af9623789fdf9.svg",
     "static/media/researchfindings.png": "/static/media/researchfindings.c07ab0aeb46603ca6485.png",
+    "static/media/battleUI.png": "/static/media/battleUI.11073c846513f512b0a0.png",
     "static/media/utep.png": "/static/media/utep.cae061d147b79b1ce789.png",
     "static/media/DR_SC2.png": "/static/media/DR_SC2.77973d409a3b344421b7.png",
     "static/media/c1header.png": "/static/media/c1header.854910a551a575d2e2d5.png",
@@ -62,16 +63,16 @@
     "static/media/miastatus.png": "/static/media/miastatus.ef201708b00d57d7ede4.png",
     "static/media/capital-one-logo-white.png": "/static/media/capital-one-logo-white.8aaa9ec6b5f07031517e.png",
     "static/media/logo.png": "/static/media/logo.c4e9164bcf48dbd5079f.png",
-    "static/media/GamePosts.csv": "/static/media/GamePosts.ddb2d0ae5023a7d0ddee.csv",
     "static/media/endless-clouds.svg": "/static/media/endless-clouds.874e3703968b8d2e6fbb.svg",
+    "static/media/GamePosts.csv": "/static/media/GamePosts.9ba6381f072ab69a0eab.csv",
     "index.html": "/index.html",
     "static/media/Projects.csv": "/static/media/Projects.f0050af2f0ea02c74ce8.csv",
     "main.8facd48a.css.map": "/static/css/main.8facd48a.css.map",
-    "main.1e1bcf95.js.map": "/static/js/main.1e1bcf95.js.map",
+    "main.cd549c5d.js.map": "/static/js/main.cd549c5d.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8facd48a.css",
-    "static/js/main.1e1bcf95.js"
+    "static/js/main.cd549c5d.js"
   ]
 }
