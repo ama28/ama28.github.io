@@ -86,11 +86,12 @@ export default class Eachday extends Component {
                 <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)'}} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FN2Xz5W67a3qwjcDpzXJzJd%2FWesley-Research-Synthesis%3Fnode-id%3D0%253A1%26t%3DZ1RuIXbiuHYI3seJ-1" allowfullscreen></iframe>
             </div>
             <div className='sectionContainer'>
-                <h2>Battle System Design Document</h2>
-                <p style={{marginBottom:'0px'}}>Using the findings, from the usability tests, I further iterated on the battle system’s defining mechanics and began synthesizing these ideas in Figma. I also created preliminary wireframes of the in-battle interface. </p>
-                <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)'}} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FltqMiltbY1s9KBamYtc3BC%2FBattle-System-Design-Document%3Fnode-id%3D0%253A1%26t%3DhpibN2LeVQgOVm31-1" allowfullscreen></iframe>
+                <h2>Next Steps</h2>
+                <p style={{marginBottom:'0px'}}>Using the findings, from the usability tests, I further iterated on the battle system’s defining mechanics and began synthesizing these ideas in Figma. I also experimented with different wireframes of the in-game GUI. </p>
+                <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)', marginBottom:'0px'}} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FltqMiltbY1s9KBamYtc3BC%2FBattle-System-Design-Document%3Fnode-id%3D0%253A1%26t%3DhpibN2LeVQgOVm31-1" allowfullscreen></iframe>
+                <img style={{marginTop:'0px'}} src={require('../../images/eachdayassets/battleUI.png')}></img>
                 <p>Currently, I am creating a low-fidelity prototype of the updated battle system in Unity. When this is finished, we will go through another round of user research and game design iteration before beginning development of the game.  </p>
-=            </div>
+            </div>
         </div>
       </div>
     )
