@@ -17,23 +17,23 @@ class Footer extends Component {
                                 or just to talk about games!
                             </div>
                             <div className='footerExternalLinks'>
-                                <Link to=''>
+                                <a target='_blank' rel="noreferrer" href='https://adrianma.itch.io/'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/itch_icon.svg"} alt='itch icon'></img>
-                                </Link>
-                                <Link to=''>
+                                </a>
+                                <a href='https://www.linkedin.com/in/adrian-ma8' target='_blank' ref='noreferrer'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/linkedin_icon.svg"} alt='linkedin icon'></img>
-                                </Link>
-                                <Link to=''>
+                                </a>
+                                <a href='mailto:amm28y@gmail.com' target='_blank' ref='noreferrer'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/email_icon.svg"} alt='email icon'></img>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                         <div className='footerInternalLinks'>
                             <Link to='/'>WORK</Link>
                             <Link to='/about'>ABOUT</Link>
                             <Link to='/archive'>ARCHIVE</Link>
-                            <Link to='/'>BLOG</Link>
-                            <Link to='/'>GALLERY</Link>
+                            <a target='_blank' rel="noreferrer" href='https://medium.com/@amm28y'>BLOG</a>
+                            <Link to='/about'>GALLERY</Link>
                             <Link to='/games'>GAMES</Link>
                         </div>
                     </div>

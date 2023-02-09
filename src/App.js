@@ -13,7 +13,6 @@ import Archive from './pages/Archive';
 import Papa from "papaparse";
 import GamePosts from './GamePosts.csv';
 import Projects from './Projects.csv';
-
 import DimensionalRift from './pages/projectPages/DimensionalRift';
 import Spin from './pages/projectPages/Spin';
 import C1 from './pages/projectPages/C1';
@@ -32,50 +31,7 @@ class App extends Component {
       data: '',
       projects: [],
       gamePosts: [],
-      archivedProjects: [
-        {
-            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/c1.png')`,
-            title:'Design Internship Program',
-            skills:'UX DESIGN · UX RESEARCH',
-            category: {design: true, games: false, research: true}
-        },
-        {
-            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/escape_dartist.svg')`,
-            title:'Escape Dartist VR',
-            skills:'GAME DESIGN · LEVEL DESIGN · XR · 3D ART',
-            category: {design: false, games: true, research: false}
-        },
-        {
-            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/channel.png')`,
-            title:'Channel',
-            skills:'GAME DESIGN · PROGRAMMING',
-            category: {design: false, games: true, research: false}
-        },
-        {
-            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/fitsaber.png')`,
-            title:'Fitsaber',
-            skills:'RESEARCH · PROGRAMMING',
-            category: {design: false, games: true, research: true}
-        },
-        {
-          backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/c1.png')`,
-          title:'Design Internship Program',
-          skills:'UX DESIGN · UX RESEARCH',
-          category: {design: true, games: false, research: true}
-        },
-        {
-            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/escape_dartist.svg')`,
-            title:'Escape Dartist VR',
-            skills:'GAME DESIGN · LEVEL DESIGN · XR · 3D ART',
-            category: {design: false, games: true, research: false}
-        },
-        {
-            backgroundImgURL: `url('${process.env.PUBLIC_URL}/assets/images/channel.png')`,
-            title:'Channel',
-            skills:'GAME DESIGN · PROGRAMMING',
-            category: {design: false, games: true, research: false}
-        },
-      ],
+      archivedProjects: [],
     }
     this.updateGameData = this.updateGameData.bind(this)
     this.updateProjectData = this.updateProjectData.bind(this)
@@ -93,6 +49,8 @@ class App extends Component {
 
   /* Parse through the two csv files upon startup */
   componentDidMount() {
+    document.title = 'Adrian Ma'
+
     Papa.parse(GamePosts, {
       download: true,
       header: true,

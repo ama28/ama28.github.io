@@ -57,16 +57,16 @@ class AboutMe extends Component {
                             </div>
                             {/* ------ Links to External Sites ------ */}
                             <div className='aboutLinks'>
-                                <a href='mailto:amm28y@gmail.com'>
+                                <a href='mailto:amm28y@gmail.com' target='_blank' ref='noreferrer'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/email_icon.svg"} alt='email icon'></img>
                                 </a>
-                                <a href='https://adrianma.itch.io/'>
+                                <a href='https://adrianma.itch.io/' target='_blank' ref='noreferrer'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/itch_icon.svg"} alt='itch icon'></img>
                                 </a>
-                                <a href=' www.linkedin.com/in/adrian-ma8'>
+                                <a href='https://www.linkedin.com/in/adrian-ma8' target='_blank' ref='noreferrer'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/linkedin_icon.svg"} alt='linkedin icon'></img>
                                 </a>
-                                <a href='https://medium.com/@amm28y'>
+                                <a href='https://medium.com/@amm28y' target='_blank' ref='noreferrer'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/medium_icon.svg"} alt='medium icon'></img>
                                 </a>
                             </div>
