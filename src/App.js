@@ -8,12 +8,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 import Archive from './pages/Archive';
-import NavBar from './components/NavBar';
 import Papa from "papaparse";
 import GamePosts from './GamePosts.csv';
 import Projects from './Projects.csv';

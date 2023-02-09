@@ -41,7 +41,7 @@ export default class P3G extends Component {
                 <h5>Cobox</h5>
             </div>
             <p>Coboxes are a set of game design resources and prompts that we sent to children within our target audience to simultaneously educate them about co-robotics and garner their input regarding game design and prior knowledge about co-robotics.</p>
-            <p>Click <a target='_blank' href='https://www.cmu.edu/roboticsacademy/news/cmra-news-2021/cobox_adrian.html'>here</a> to see my debrief on designing coboxes on the CMU robotics website.</p>
+            <p>Click <a target='_blank' rel="noreferrer" href='https://www.cmu.edu/roboticsacademy/news/cmra-news-2021/cobox_adrian.html'>here</a> to see my debrief on designing coboxes on the CMU robotics website.</p>
           </div>
         </div>
       </div>

@@ -5,13 +5,6 @@ import ProjectOverview from '../../components/ProjectOverview';
 
 export default class EscapeDartist extends Component {
   render() {
-    const backgroundStyle = {
-      backgroundImage: `url('${process.env.PUBLIC_URL}/assets/images/darkened_background.jpg')`,
-      backgroundSize: '',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
-
     return (
       <div className='projectPage'>
         <NavBar 

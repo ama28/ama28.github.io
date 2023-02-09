@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../App.css';
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
     Link,
-    useRouteMatch,
-    useParams
   } from "react-router-dom";
 
 export default function NavBar(props) {
@@ -37,9 +32,9 @@ export default function NavBar(props) {
             </Link>
             {/* ========== Buttons for Pages ========== */}
             <div className="navButtonsContainer">
-                <Link to="/" className={`${props.currentPage == 'Work' ? currentButtonStyle : ''} ${(filled || props.alwaysWhite) ? "darkFont" : " "}`}
+                <Link to="/" className={`${props.currentPage === 'Work' ? currentButtonStyle : ''} ${(filled || props.alwaysWhite) ? "darkFont" : " "}`}
                 onClick={() => props.switchPage(`url('${process.env.PUBLIC_URL}/assets/images/background.jpg')`, 'Work')}>WORK</Link>
-                <Link to="/about" className={`${props.currentPage == 'About' ? currentButtonStyle : ''} lastRight ${(filled || props.alwaysWhite) ? "darkFont" : " "}`}
+                <Link to="/about" className={`${props.currentPage === 'About' ? currentButtonStyle : ''} lastRight ${(filled || props.alwaysWhite) ? "darkFont" : " "}`}
                 onClick={() => props.switchPage(`url('${process.env.PUBLIC_URL}/assets/images/darkened_background.jpg')`, 'About')}>ABOUT</Link>
             </div>
         </div>

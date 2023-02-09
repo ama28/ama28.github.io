@@ -22,14 +22,14 @@ export default class ProjectOverview extends Component {
             <div className='leftHalf'>
               <div className='projectOverview'>
                   {this.props.title != null && <h1 className='noTopMargin'>{this.props.title.toUpperCase()}</h1>}
-                  {this.props.titleImage != null && <img src={this.props.titleImage}></img>}
+                  {this.props.titleImage != null && <img src={this.props.titleImage} alt='project logo'></img>}
                   <h3 className='noTopMargin bottomMargin'><b>{this.props.description}</b></h3>
                   <div className='linksContainer'>
                       {this.props.itchlink != null && <a target="_blank" href={this.props.itchlink} className='rectButton hvr-shutter-out-horizontal medium'>ITCH.IO</a>}
-                      {this.props.githublink != null && <a target="_blank" href={this.props.githublink} className='rectButton hvr-shutter-out-horizontal medium'>GITHUB</a>}
-                      {this.props.gcslink != null && <a target="_blank" href={this.props.gcslink} className='rectButton hvr-shutter-out-horizontal medium'>GCS</a>}
-                      {this.props.websitelink != null && <a target="_blank" href={this.props.websitelink} className='rectButton hvr-shutter-out-horizontal medium'>WEBSITE</a>}
-                      {this.props.articlelink != null && <a target="_blank" href={this.props.articlelink} className='rectButton hvr-shutter-out-horizontal medium'>ARTICLE</a>}
+                      {this.props.githublink != null && <a target="_blank" rel="noreferrer" href={this.props.githublink} className='rectButton hvr-shutter-out-horizontal medium'>GITHUB</a>}
+                      {this.props.gcslink != null && <a target="_blank" rel="noreferrer" href={this.props.gcslink} className='rectButton hvr-shutter-out-horizontal medium'>GCS</a>}
+                      {this.props.websitelink != null && <a target="_blank" rel="noreferrer" href={this.props.websitelink} className='rectButton hvr-shutter-out-horizontal medium'>WEBSITE</a>}
+                      {this.props.articlelink != null && <a target="_blank" rel="noreferrer" href={this.props.articlelink} className='rectButton hvr-shutter-out-horizontal medium'>ARTICLE</a>}
                   </div>
                   <h3 className='noTopMargin'><b className='rightGap'>My Roles</b>{this.props.roles}</h3>
                   <h3 style={{marginTop:'15px'}}><b className='rightGap'>Duration</b>{this.props.duration}</h3>
@@ -38,7 +38,7 @@ export default class ProjectOverview extends Component {
               </div>
             </div>
             <div className='rightHalf'>
-              <img src={this.props.imageURL}></img>
+              <img src={this.props.imageURL} alt='project example'></img>
             </div>
         </div>
     )

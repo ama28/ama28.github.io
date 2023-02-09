@@ -8,13 +8,6 @@ import Info from '../../images/amosassets/amosinfo.svg';
 
 export default class Amos extends Component {
   render() {
-    const backgroundStyle = {
-      backgroundImage: `url('${process.env.PUBLIC_URL}/assets/images/darkened_background.jpg')`,
-      backgroundSize: '',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
-
     return (
       <div className='projectPage'>
         <NavBar 
@@ -47,21 +40,21 @@ export default class Amos extends Component {
                 <h2>Methods</h2>
                 <div className='row'>
                     <p>We began with <b>background research,</b> using a combination of <b>informational and experiential activites</b> with a variety of social media platforms to learn about stakeholders in the project and inform our own understanding of algorithmic bias. </p>
-                    <img className='min' src={require('../../images/amosassets/socials.png')}></img>
+                    <img className='min' src={require('../../images/amosassets/socials.png')} alt='social media icons'></img>
                 </div>
                 <p>To begin working towards our solution, we utilized <b>generative think-aloud interviews,</b> where we talked to <b>four college students</b> with varying experiences with Instagram and varying familiarity with algorithmic bias.</p>
                 <p>We also conducted <b>contextual inquiry interviews,</b> where we again interviewed four new college students from various colleges in the context of where and when they would use Instagram in their everyday life.</p>
 
                 <div className='row'>
-                    <img src={require('../../images/amosassets/amosaffinitydiagram.jpeg')}></img>
+                    <img src={require('../../images/amosassets/amosaffinitydiagram.jpeg')} alt='affinity diagram of interview notes'></img>
                     <p>By going through each of interview notes as a team and creating an <b>affinity diagram,</b> we synthesized our findings, identified our priorities, and generated insights that would inform the direction our solution would take.</p>
                 </div>
 
                 <p>With a better understanding of our target users and the problem space, we moved to brainstorming possible solutions using <b>storyboards that each correlated to a specific user need.</b> Below are a few storyboards that I created along with a wireframe of a brower extension solution. </p>
 
                 <div className='row'>
-                    <img src={require('../../images/amosassets/flagstoryboard.jpg')}></img>
-                    <img src={require('../../images/amosassets/hackathonstoryboard.jpg')}></img>
+                    <img src={require('../../images/amosassets/flagstoryboard.jpg')} alt='storyboard of a flagging solution'></img>
+                    <img src={require('../../images/amosassets/hackathonstoryboard.jpg')} alt='storyboard of a hackathon solution'></img>
                 </div>
 
                 <p>We created a variety of storyboards; some dealt with safe ideas that users would likely be comfortable using, while others were more unfamiliar and risky. To <b>reaffirm that our ideas targeted actual user needs,</b> we utilized a <b>speed dating</b> interview technique to get feedback from another four college students on each of the storyboards. All of our interviewees converged on the idea of “Flag Upvoting” that I storyboarded above, since they felt that it most directly targeted their <b>need to learn more about algorithmic bias in an accesible way.</b> </p>
@@ -69,14 +62,14 @@ export default class Amos extends Component {
 
             <div className='sectionContainer'>
                 <h2>Key Quotes and Insights</h2>
-                <img src={Quotes}></img>
+                <img src={Quotes} alt='visual of important quotes from interviewees and the insights derived from them'></img>
             </div>
 
             <div className='sectionContainer'>
                 <h2>Solution</h2>
                 <p>Using the insights we generated from all previous research stages, our team decided on what we believe is the most effective approach for tackling our problem statement: an Instagram bias-flagging extension called Amos.</p>
                 <div className='row'>
-                    <img className='min'style={{minWidth:'45%'}} src={Prototype}></img>
+                    <img className='min'style={{minWidth:'45%'}} src={Prototype} alt='screenshot of the Amos prototype'></img>
                     <div>
                         <p>In addition to liking, commenting, sharing, and saving, users also have the <b>option to downvote a post they believe is affected by algorithmic bias.</b> </p>
 
@@ -91,7 +84,7 @@ export default class Amos extends Component {
 
                         <p> This page can be returned to at any time and further encourages users to use the flag button for its intended purpose. </p>
                     </div>
-                    <img className='min'style={{minWidth:'40%'}} src={Info}></img>
+                    <img className='min'style={{minWidth:'40%'}} src={Info} alt='screenshot of the info page of the prototype'></img>
                 </div>
             </div>
         </div>

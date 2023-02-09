@@ -3,12 +3,7 @@ import '../App.css';
 import GamePost from '../components/GamePost';
 import NavBar from '../components/NavBar';
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
     Link,
-    useRouteMatch,
-    useParams
   } from "react-router-dom";
 
 class AboutMe extends Component {
@@ -62,16 +57,16 @@ class AboutMe extends Component {
                             </div>
                             {/* ------ Links to External Sites ------ */}
                             <div className='aboutLinks'>
-                                <a href=''>
+                                <a href='mailto:amm28y@gmail.com'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/email_icon.svg"} alt='email icon'></img>
                                 </a>
-                                <a href=''>
+                                <a href='https://adrianma.itch.io/'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/itch_icon.svg"} alt='itch icon'></img>
                                 </a>
-                                <a href=''>
+                                <a href=' www.linkedin.com/in/adrian-ma8'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/linkedin_icon.svg"} alt='linkedin icon'></img>
                                 </a>
-                                <a href=''>
+                                <a href='https://medium.com/@amm28y'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/medium_icon.svg"} alt='medium icon'></img>
                                 </a>
                             </div>

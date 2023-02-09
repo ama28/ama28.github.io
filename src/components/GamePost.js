@@ -20,6 +20,8 @@ class GamePost extends Component {
                 return this.props.category.design;
             case "Recent":
                 return this.props.category.games;
+            default:
+                break;
         }
     }
 
@@ -64,7 +66,7 @@ class GamePost extends Component {
                     <div className='gameCardBack'>
                         {/* ========== Cover Image for the Post ========== */}
                         <div className='headerImage'>
-                            <img src={this.props.imageURL} alt='a preview image of the game being reviewed'></img>
+                            <img src={this.props.imageURL} alt='the game being reviewed'></img>
                         </div>
                         {/* ========== Rest of the Card that Contains Content and Rating ========== */}
                         <div className='gameCardDetailsContainer'>

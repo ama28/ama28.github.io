@@ -1,17 +1,8 @@
-import { toHaveAttribute } from '@testing-library/jest-dom/dist/matchers';
 import React, { Component } from 'react';
 import '../App.css';
 import ProjectSquare from '../components/ProjectSquare';
 import PageHeader from '../components/PageHeader';
 import NavBar from '../components/NavBar';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams
-  } from "react-router-dom";
 
 class Work extends Component {
     constructor(props) {

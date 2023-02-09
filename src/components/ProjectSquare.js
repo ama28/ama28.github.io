@@ -1,12 +1,7 @@
 import { Component } from 'react';
 import '../App.css';
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
     Link,
-    useRouteMatch,
-    useParams
   } from "react-router-dom";
 
 class ProjectSquare extends Component {
@@ -44,6 +39,8 @@ class ProjectSquare extends Component {
                 return this.props.category.games;
             case "Research":
                 return this.props.category.research;
+            default:
+                break;
         }
     }
 

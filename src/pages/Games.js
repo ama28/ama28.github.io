@@ -37,7 +37,7 @@ class Games extends Component {
     /* Renders posts high to low or low to high based on rating and the input boolean */
     renderByRating(starRating) {
         return this.props.gamePosts.map((item, idx) => {
-            if (item.starCount == starRating)
+            if (item.starCount === starRating)
                 return <GamePost
                             key={idx}
                             filterMode={this.state.filterMode}
@@ -67,6 +67,8 @@ class Games extends Component {
                     LH.push(this.renderByRating(i));
                 }
                 return LH;
+            default:
+                break;
         }
     }
 
