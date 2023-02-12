@@ -17,8 +17,9 @@ export default class Eachday extends Component {
           description="Gamifying ADHD education and self-management for clinical patients"
           websitelink='https://www.eachday.health/'
           roles="Game Designer, UX Designer"
-          duration="6 months"
+          duration="6 months (ongoing)"
           mentors="Erik Harpstead, Christian Murphy"
+          tools="Figma, Unity"
           />
 
         <div className='contentContainer'>
@@ -37,7 +38,7 @@ export default class Eachday extends Component {
                     <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)'}} width='600' height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FccsH0Ng27Mq95y7EFpetVE%2FUser-Flow-Diagram%3Fnode-id%3D0%253A1%26t%3D3uIBEfJdSQF9ksHr-1" ></iframe>
 
                     <div style={{maxWidth:'30%'}}>
-                        <p>I also needed to understand how the gameplay would fit into the existing self-management app, in order to ensure that my game systems would tie in seamlessly and not disrupt the purely medical portion of the app.</p><p> For this purpose, I <b>created a high-level user flow</b> to determine when and how users would navigate between the two sections of the app. </p>
+                        <p>I also needed to understand how the gameplay would fit into the existing self-management app, in order to ensure that my game systems would tie in seamlessly and not disrupt the purely medical portion of the app.</p><p> For this purpose, <b>I created a high-level user flow</b> to determine when and how users would navigate between the two sections of the app. </p>
                     </div>
                 </div>
                
@@ -46,45 +47,52 @@ export default class Eachday extends Component {
                 <div className='row'>
                     <div>
                         <h2>Game Design Document</h2>
-                        <p>Next came the primary ideation phase. <b>I created a game design document (GDD) and defined all the core systems of the game,</b> which have gone through several iterations through user research and discussion with members of the medical side of the team. </p>
+                        <p>I then created a game design document (GDD) and defined all the core systems of the game. <b>This served as the one source of truth for gameplay and gamification and assisted design both within and outside of the gameplay team.</b> </p>
 
-                        <p>Here is an early version of the document. As it is an evolving project, this document is being frequently updated and the newest version cannot be shown.</p>
+                        <p>Here is an early version of the document; the document is constantly evolving and the newest version cannot be shown.</p>
                     </div>
                     <iframe style={{minWidth:'55%'}} src={require('../../images/eachdayassets/document.pdf')} height="500px"></iframe>
                 </div>
             </div>
             <div className='sectionContainer'>
+                <h2>Bringing it to Life</h2>
                 <div className='row'>
-                    <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)'}} width="400" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FkxoAebvsqFZiCRSc3vcvD4%2FGame-Flow-Wireframes%3Fpage-id%3D0%253A1%26node-id%3D47%253A15%26viewport%3D-479%252C540%252C0.45%26scaling%3Dscale-down%26starting-point-node-id%3D47%253A15" allowfullscreen></iframe>
+                    <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)', marginTop:"10px"}} width="400" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FkxoAebvsqFZiCRSc3vcvD4%2FGame-Flow-Wireframes%3Fpage-id%3D0%253A1%26node-id%3D47%253A15%26viewport%3D-479%252C540%252C0.45%26scaling%3Dscale-down%26starting-point-node-id%3D47%253A15" allowfullscreen></iframe>
                     <div>
-                     <h2>App Integration</h2>
-                        <p>Using the overarching systems from the GDD, I <b>designed and iterated on wireframes of the app’s gameplay portion’s core user flow.</b> </p>
+                        <p>Using the overarching systems from the GDD, I <b>designed and iterated on wireframes for the main hub of gameplay integrated with the existing app.</b> </p>
+                        <img className='full' src={require('../../images/eachdayassets/wireframe.JPG')}></img>
                         <p>Now, with a good idea of how the gameplay would fit into the existing app, my next objective was the most crucial part of the game's goal of user engagement and retention — the battle system.</p>
-                        <p>After some research and low-fidelity prototyping of different game ideas, for reasons you can find in the GDD, <b>we decided on a turn-based battle system.</b></p>
                     </div>
                 </div>
             </div>
             <div className='sectionContainer'>
-                <h2>The Battle System</h2>
+                <h2>Desgining The Battle System</h2>
+                <p>After some research and low-fidelity prototyping of different game ideas, for reasons you can find in the GDD, we decided on a turn-based battle system.</p>
+                <p><b>Eachday's battle system ties in education about executive function and remedies for ADHD with challenging turn-based strategy as well as engaging real-time gameplay elements.</b></p>
                 <div className='leftRow'>
                     <h5>Research and Ideation</h5>
                 </div>
-                <p style={{marginBottom:'0px'}}>To ideate how a turn-based system might tie into the medical objectives of the app and how to make it engaging for my target audience, I <b>researched existing turn-based systems and brainstormed possible mechanics.</b> </p>
+                <p style={{marginBottom:'0px'}}>To ideate how a turn-based system might tie into the medical objectives of the app and how to make it engaging for my target audience, <b>I researched existing turn-based systems and brainstormed possible mechanics.</b> </p>
                 <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)'}} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFn7l5dQQmRpPVTSA8ej7qa%2FBattle-System-Brainstorm%3Fnode-id%3D0%253A1%26t%3DPSBGRFA8p9Li92fz-1" allowfullscreen></iframe>
                 
                 <div className='row'>
                     <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)'}} width="400" height="300" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FggmRPDeDC1Bvg9h27HCdnR%2FEnemies-Brainstorm%3Fnode-id%3D0%253A1%26t%3DwD42hxHKprb9NgyL-1" allowfullscreen></iframe>
                     <div>
                         <h5>Enemy Brainstorm</h5>
-                        <p>One idea was to use skills dealing damage to enemies as a metaphor for treatment methods combating ADHD symptoms. To test this concept, we brainstormed how enemies could be linked to executive functions and common symptoms.</p>
+                        <p>One idea I had to use skills dealing damage to enemies as a metaphor for treatment methods combating ADHD symptoms. To test this concept, we brainstormed how enemies could be linked to executive functions and common symptoms.</p>
                     </div>
                 </div>
             </div>
             <div className='sectionContainer'>
                 <h2>Paper Prototyping</h2>
                 <p style={{marginBottom:'0px'}}>With some ideas in place, I created a paper prototype of the battle system and ran think-aloud usability tests with four ADHD patients from a local school. </p>
-                <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)'}} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FN2Xz5W67a3qwjcDpzXJzJd%2FWesley-Research-Synthesis%3Fnode-id%3D0%253A1%26t%3DZ1RuIXbiuHYI3seJ-1" allowfullscreen></iframe>
+                <div className='row' style={{marginTop:'40px'}}>
+                    <iframe className='sameHeight'style={{border: '1px solid rgba(0, 0, 0, 0.1)', margin:'0px'}} width="500" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FN2Xz5W67a3qwjcDpzXJzJd%2FWesley-Research-Synthesis%3Fnode-id%3D0%253A1%26t%3DZ1RuIXbiuHYI3seJ-1" allowfullscreen></iframe>
+                    <img className='sameHeight' src={require('../../images/eachdayassets/paper.jpg')}></img>
+                </div>
+                <p><b>These sessions revealed many insights regarding how ADHD patients interact with turn-based systems as well as how certain elements may resonate when linked to learning objectives.</b></p>
             </div>
+               
             <div className='sectionContainer'>
                 <h2>Next Steps</h2>
                 <p style={{marginBottom:'0px'}}>Using the findings, from the usability tests, I further iterated on the battle system’s defining mechanics and began synthesizing these ideas in Figma. I also experimented with different wireframes of the in-game GUI. </p>

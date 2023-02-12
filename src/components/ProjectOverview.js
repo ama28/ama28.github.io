@@ -35,6 +35,7 @@ export default class ProjectOverview extends Component {
                   <h3 style={{marginTop:'15px'}}><b className='rightGap'>Duration</b>{this.props.duration}</h3>
                   {this.props.team != null && <h3 style={{marginTop:'15px'}}><b className='rightGap'>Team</b>{this.props.team}</h3>}
                   {this.props.mentors != null && <h3 style={{marginTop:'15px'}}><b className='rightGap'>Mentors</b>{this.props.mentors}</h3>}
+                  {this.props.tools != null && <h3 style={{marginTop:'15px'}}><b className='rightGap'>Tools</b>{this.props.tools}</h3>}
               </div>
             </div>
             <div className='rightHalf'>

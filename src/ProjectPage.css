@@ -288,7 +288,7 @@ li {
   margin: 0px;
 }
 
-.row > img.sameHeight {
+.row > .sameHeight {
   max-width: none;
   max-height: 300px;
 }
