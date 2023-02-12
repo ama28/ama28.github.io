@@ -40,7 +40,7 @@ export default class C1 extends Component {
             
             <div className='column'>
               <h4>Understanding the Problem</h4>
-              <p>For this project, I began with utilizing <b>assumptions and best practices rather usability tests.</b> Although this was not a workflow I was used to using when trying to improve existing products, I learned that with an internal tool comes more freedom in the design process as well less consequences for publishing flawed designs.
+              <p>For this project, I began with utilizing <b>assumptions and best practices rather than usability tests.</b> Although this was not a workflow I was used to using when trying to improve existing products, I learned that with an internal tool comes more freedom in the design process as well as less consequences for publishing flawed designs.
               In this case, since it was easy to identify certain pain points in the interface using best practices, it was a more efficient use of resources to push the research phase until later.</p>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default class C1 extends Component {
           <div className='sectionContainer'>
             <h2 className='first'>Who are we designing for?</h2>
             <p>Although I wasn't diving right into research, I still needed to understand who exactly I was designing for.</p>
-            <p>After talking to some C1 associates, it was clear to me that established designers only had a few specialized uses for pulse while newer designers used the site more hollistically. As my focus was on reworking the high-level structure of the site, this knowledge <b>shifted my focus towards newer designers and well as partners that need an entry point for understanding what XD can do for them.</b> </p>
+            <p>After talking to some C1 associates, it was clear to me that established designers only had a few specialized uses for Pulse while newer designers used the site more hollistically. As my focus was on reworking the high-level structure of the site, this knowledge <b>shifted my focus towards newer designers as well as partners that need an entry point for understanding what XD can do for them.</b> </p>
             <div className='row bottomMargin'>
               <p><b>I zoned in on four groups as my target audience</b> shown on the right. Although established designers were not the main focus, I had to ensure my changes did not obscure their specialized uses. And as people would have to implement my designs, I also had to consider the ease of implementation for developers. </p>
               <img className="half" src={require('../../images/c1assets/pulse-audience.png')}></img>
@@ -58,8 +58,8 @@ export default class C1 extends Component {
           <div className='sectionContainer'>
 
             <h2 className='first'>Pain Point 1: Complex Navigation</h2>
-            <p>The first pain point I targeted was the need for complex navigation to simple answers. When speaking to some associates on slack, their most common reason for low pulse usage was the <b>difficulty of finding information the needed using the current navigation system.</b> </p>
-            <p>An example of this problem is the location of the home button on the current top nav, buried under the "How We Work dropdown". Although this top nav structure was due to tech constraints rather than design choices, usability tests later on in the design process showed me that the <b>location of the home button is vital to efficient navigation and should be prioritized.</b> Other than the home button, the complexity was also apparent in the lack of important references at high levels of the IA such as a calendar of events. </p>
+            <p>The first pain point I targeted was the need for complex navigation to simple answers. When speaking to some associates on slack, their most common reason for low Pulse usage was the <b>difficulty of finding information they needed using the current navigation system.</b> </p>
+            <p>An example of this problem is the location of the home button on the current top nav, buried under the "How We Work" dropdown. Although this top nav structure was due to tech constraints rather than design choices, usability tests later on in the design process showed me that the <b>location of the home button is vital to efficient navigation and should be prioritized.</b> Other than the home button, the complexity was also apparent in the lack of important references at high levels of the IA such as a calendar of events. </p>
             <div className='row' style={{marginTop: '20px'}}>
               <img className='sameHeight' src={require('../../images/c1assets/currentnav.png')}></img>
               <img className='sameHeight' src={require('../../images/c1assets/slack.png')}></img>
@@ -84,7 +84,7 @@ export default class C1 extends Component {
               <img src={require('../../images/c1assets/currentnav.png')}></img>
               <img src={require('../../images/c1assets/painpoint1ref.png')}></img>
             </div>
-            <p>On the left is the current top navigation for pulse. It's extremely overwhelming, especially for newer users. LumApps has a 4 column constraint, which is the reason why the home page link is located under the "How We Work" dropdown rather than in its own column. But the biggest problem is that due to the difficulty of creating reusable components in LumApps, <b>this complicated top nav must be rebuilt by hand on each and every XD pulse page</b>, leading to many inconsistencies from user error. </p>
+            <p>On the left is the current top navigation for Pulse. It's extremely overwhelming, especially for newer users. LumApps has a 4 column constraint, which is the reason why the home page link is located under the "How We Work" dropdown rather than in its own column. But the biggest problem is that due to the difficulty of creating reusable components in LumApps, <b>this complicated top nav must be rebuilt by hand on each and every XD Pulse page</b>, leading to many inconsistencies from user error. </p>
             <p>On the right are examples of some of the errors that arose from developers having to implement this top nav by hand. The DIB link on the top nav for the Design Process page takes you to the DIB page for the HR department rather than design, while the top nav on the actual design DIB page is completely uninteractable. </p>
             <h2>The Solution: Integrated Navigation</h2>
             <div className='row'>
@@ -97,7 +97,7 @@ export default class C1 extends Component {
             <p>In place of the dropdown fields I placed a <b>table of contents-like integrated nav on each of the landing pages</b> which link to parts of the landing pages that have summaries of the subtopics as well as links to them. However, like the landing pages, this integrated nav structure resulted from several iterations and rounds of research.</p>
 
             <h2>Is it really better?</h2>
-            <p>Throughout my iterations, I utilized a 3 methods of evaluating whether my new designs were truly an improvement over the current pulse site. </p>
+            <p>Throughout my iterations, I utilized a 3 methods of evaluating whether my new designs were truly an improvement over the current Pulse site. </p>
             <p>The <b>user flow diagrams</b> that I created before were even more valuable for evaluating whether the integrated nav was an improvement over the old top nav. </p>
             <p> With some findings from several structured interviews I conducted, I also <b>ranked the most common to least common use cases</b> for the Pulse site, and compared how they would differ across the two navs. Finally, I analyzed the <b>pros and cons of each nav flow first for developers, then for users,</b> keeping in mind that although ease of implementation was important, the primary audience for my design was designers. </p>
             <img className='full' src={require('../../images/c1assets/nav-analysis.png')}></img>
@@ -128,7 +128,7 @@ export default class C1 extends Component {
               <div>
               <h4>Pulse Conventions</h4>
                 <p>Another challenge I faced was balancing design in <b>according to best practices versus according to conventions.</b> For example, on the images on the left, can you confidently tell what's clickable? </p>
-                <p>I wanted to <b>improve these link affordances, but also didn't want to confuse those who were used to the interactions that were already present on Pulse.</b> This pushed me to to create really strong affordances that would not only create a seamless experience for new users, but stand out to those used to seeing these entry points in a different context. </p>
+                <p>I wanted to <b>improve these link affordances, but also didn't want to confuse those who were used to the interactions that were already present on Pulse.</b> This pushed me to create really strong affordances that would not only create a seamless experience for new users, but stand out to those used to seeing these entry points in a different context. </p>
               </div>
             </div>
           </div>
@@ -150,14 +150,14 @@ export default class C1 extends Component {
                 <img src={require('../../images/c1assets/scope.png')}></img>
                 <h5>Scope</h5>
               </div>
-              <p>The scope of the Accelerator was far larger than any project I had ever worked on. Since the service was attempting to target so many processes, I quickly understanding a variety user experiences and who exactly was involved in each of them was challenging but pushed my ability to empathize and perform user research efficiently. </p>
+              <p>The scope of the Accelerator was far larger than any project I had ever worked on. Since the service was attempting to target so many processes, I had to quickly understand a variety user experiences and who exactly was involved in each of them. This was challenging but pushed my ability to empathize and perform user research efficiently. </p>
               <br></br>
 
               <div className='leftRow'>
                 <img src={require('../../images/c1assets/blueprint.png')}></img>
                 <h5>Blueprinting</h5>
               </div>
-              <p>If the number of experiences we were trying to streamline wasn't enough, even each individual process the Aceelerator targeted was large in scope, which leads me to my second challenge, conducting blueprinting sessions effectively.  </p>
+              <p>If the number of experiences we were trying to streamline wasn't enough, even each individual process the Accelerator targeted was large in scope, which leads me to my second challenge, conducting blueprinting sessions effectively.  </p>
               <p>As someone used to conducting usability tests for 5-minute long user experiences, the idea of <b>capturing week-long or sometimes even month-long processes in a single hour long interview was extremely daunting.</b> I had to think about how to probe as much information as possible from stakeholders in a short amount of time and work through questions such as, "is it more effective to speak to process owners and customers simultaneously or individually?" </p>
               <br></br>
 
