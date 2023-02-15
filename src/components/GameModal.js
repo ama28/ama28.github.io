@@ -118,6 +118,7 @@ export default function GameModal(props) {
             <h2 style={{fontWeight: '600'}}>Score: {props.starCount}/5</h2>
             <p>{props.description}</p>
             {renderArticle()}
+            <p>Check out my deep dive into the game <a href={props.articlelink} target="_blank">here.</a></p>
           </div>
           <button className="closeModal" onClick={() => props.closeModal()}>CLOSE</button>
           <div style={SPACER_STYLE}></div>

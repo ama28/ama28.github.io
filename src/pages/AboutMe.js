@@ -57,16 +57,16 @@ class AboutMe extends Component {
                             </div>
                             {/* ------ Links to External Sites ------ */}
                             <div className='aboutLinks'>
-                                <a href='mailto:amm28y@gmail.com' target='_blank' ref='noreferrer'>
+                                <a href='mailto:amm28y@gmail.com' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/email_icon.svg"} alt='email icon'></img>
                                 </a>
-                                <a href='https://adrianma.itch.io/' target='_blank' ref='noreferrer'>
+                                <a href='https://adrianma.itch.io/' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/itch_icon.svg"} alt='itch icon'></img>
                                 </a>
-                                <a href='https://www.linkedin.com/in/adrian-ma8' target='_blank' ref='noreferrer'>
+                                <a href='https://www.linkedin.com/in/adrian-ma8' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/linkedin_icon.svg"} alt='linkedin icon'></img>
                                 </a>
-                                <a href='https://medium.com/@amm28y' target='_blank' ref='noreferrer'>
+                                <a href='https://medium.com/@amm28y' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/medium_icon.svg"} alt='medium icon'></img>
                                 </a>
                             </div>
@@ -89,10 +89,12 @@ class AboutMe extends Component {
 
                         {/* ------ Featured Game Post ------ */}
                         <GamePost 
-                            starCount={this.props.gamePosts[this.props.gamePosts.length-1].starCount}
                             title={this.props.gamePosts[this.props.gamePosts.length-1].title}
                             description={this.props.gamePosts[this.props.gamePosts.length-1].description}
-                            imageURL={this.props.gamePosts[this.props.gamePosts.length-1].imageURL}/>
+                            imageURL={this.props.gamePosts[this.props.gamePosts.length-1].imageURL}
+                            starCount={this.props.gamePosts[this.props.gamePosts.length-1].starCount}
+                            articlelink={this.props.gamePosts[this.props.gamePosts.length-1].articlelink}
+                        />
 
                         <Link to='/games' className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
                     </div>

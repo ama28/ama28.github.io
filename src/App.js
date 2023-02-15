@@ -47,7 +47,6 @@ class App extends Component {
     }))
   }
 
-  /* Parse through the two csv files upon startup */
   componentDidMount() {
     document.title = 'Adrian Ma'
 
@@ -119,6 +118,7 @@ class App extends Component {
         starCount: parseInt(post.rating),
         description: post.description,
         content: this.to2Darray(post.headers, post.sections),
+        articlelink: post.articlelink,
       }
     })
     this.setState({gamePosts: data});

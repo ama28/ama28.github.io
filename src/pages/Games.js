@@ -30,7 +30,8 @@ class Games extends Component {
                         title={item.title}
                         description={item.description}
                         starCount={item.starCount}
-                        content={item.content}/>
+                        content={item.content}
+                        articlelink={item.articlelink}/>
         })
     }
 
@@ -46,7 +47,8 @@ class Games extends Component {
                             description={item.description}
                             starCount={item.starCount}
                             headers={item.headers}
-                            content={item.content}/>
+                            content={item.content}
+                            articlelink={item.articlelink}/>
         })
     }
 
@@ -84,7 +86,7 @@ class Games extends Component {
                 <PageHeader
                     currentPage={this.props.currentPage}
                     title="Adrian's Game Corner"
-                    normalDescription="If it wasn't obvious already, I love games! Here are some of the games I've played and the impact they have left on me."
+                    normalDescription="If it wasn't obvious already, I love games! Here are my opinions on some of the games I've played and the impact they have left on me."
                 />
 
                 <div className='workContentContainer games'>

@@ -17,13 +17,13 @@ class Footer extends Component {
                                 or just to talk about games!
                             </div>
                             <div className='footerExternalLinks'>
-                                <a target='_blank' rel="noreferrer" href='https://adrianma.itch.io/'>
+                                <a target='_blank' href='https://adrianma.itch.io/'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/itch_icon.svg"} alt='itch icon'></img>
                                 </a>
-                                <a href='https://www.linkedin.com/in/adrian-ma8' target='_blank' ref='noreferrer'>
+                                <a href='https://www.linkedin.com/in/adrian-ma8' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/linkedin_icon.svg"} alt='linkedin icon'></img>
                                 </a>
-                                <a href='mailto:amm28y@gmail.com' target='_blank' ref='noreferrer'>
+                                <a href='mailto:amm28y@gmail.com' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/email_icon.svg"} alt='email icon'></img>
                                 </a>
                             </div>
@@ -32,7 +32,7 @@ class Footer extends Component {
                             <Link to='/'>WORK</Link>
                             <Link to='/about'>ABOUT</Link>
                             <Link to='/archive'>ARCHIVE</Link>
-                            <a target='_blank' rel="noreferrer" href='https://medium.com/@amm28y'>BLOG</a>
+                            <a target='_blank' href='https://medium.com/@amm28y'>BLOG</a>
                             <Link to='/about'>GALLERY</Link>
                             <Link to='/games'>GAMES</Link>
                         </div>
