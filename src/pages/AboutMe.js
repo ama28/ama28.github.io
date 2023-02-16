@@ -120,6 +120,20 @@ class AboutMe extends Component {
                         <div className='rectButton small' style={{opacity: '40%'}}>UNDER CONSTRUCTION</div>
                     </div>
                 </div>
+
+                <div className='aboutWebsiteContainer'>
+                    <h1>This Website</h1>
+                    <div className='aboutWebsite'>
+                        <a href='https://ama28.github.io/websiteV3/' target='_blank'><img src={require('../images/oldwebsite.png')}></img></a>
+                        <div>
+                            <p>This website is my third iteration of a portfolio site (second iteration on the left), and was <b>built from scratch using React without the use of any component libraries like Bootstrap.</b> <br></br><br></br>I’ve designed a lot of websites, but never really understood the experiences of the developers that would have to implement my designs. <b>This project serves to help me bridge that gap so that I can better understand developer needs in my future work.</b> </p>
+                            <p>The most crucial problem with my previous iterations was the difficulty of adding new content. The third iteration incorporates a better user experience and solves this problem through <b>a system I created with the Papa Parse package that allows me to add new content to the site through csv files, without needing to touch even a line of code.</b> </p>
+                        </div>
+                    </div>
+                    <div className='aboutWebsite'>
+                        <p><b>The content on this site serves not only as a way to display my experience to employers, but also as a way to ensure that I continue growing as a designer.</b> Each time I undertake a project, my perspective on the design process evolves as I work with different audiences in different contexts. Documenting my experiences here helps me avoid mistakes I’ve made in the past and bring insights that I discover into every project that follows. </p>
+                    </div>
+                </div>
             </div>
         );
     }

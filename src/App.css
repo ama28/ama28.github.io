@@ -520,7 +520,7 @@ select option {
   font-size: 20px;
   margin-bottom: 20px;
   line-height: 1.5em;
-  color: lightgray;
+  color: #DEDEDE;
 }
 
 .aboutLinks {
@@ -535,12 +535,15 @@ select option {
   width: 40px;
 }
 
+
+
 /* ================= Game Corner & Art Gallery Callout Styles =================*/
 .otherWork {
   display: flex;
   justify-content: space-around;
-  margin: 0px 90px 100px 90px;
+  margin: 0px 90px 70px 90px;
   border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .aboutCallout {
@@ -549,7 +552,7 @@ select option {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 70px 0px 0px 0px;
+  margin: 70px 0px 70px 0px;
   gap: 20px;
 }
 
@@ -584,6 +587,33 @@ select option {
   padding: 8px 30px;
   margin: 20px auto;
   border: 3.5px solid white;
+}
+
+.aboutWebsiteContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.aboutWebsite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin-bottom: 0px;
+  color: #DEDEDE;
+  font-weight: 300;
+}
+
+.aboutWebsite img {
+  max-height: 300px;
+  margin-right: 40px;
+}
+
+.aboutWebsite h1 {
+  font-size: 24px;
 }
 
 /* ================= Game Review Card Styles =================*/
@@ -729,6 +759,12 @@ select option {
 }
 
 /* ================================== MOBILE STYLES ==================================*/
+@media only screen and (max-width: 1300px) {
+  .aboutWebsite {
+    flex-direction: column;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   /* ----- Global -----*/
   html, body {
