@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ff64973.css",
-    "main.js": "/static/js/main.30dda8ff.js",
+    "main.css": "/static/css/main.01fc331b.css",
+    "main.js": "/static/js/main.9d37b650.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/KalenAddStop.mp4": "/static/media/KalenAddStop.4ff32391e513d8760be5.mp4",
     "static/media/gif.gif": "/static/media/gif.af7769770586991961bd.gif",
     "static/media/document.pdf": "/static/media/document.63d2e5335645b2e2090e.pdf",
     "static/media/DR_Header.jpg": "/static/media/DR_Header.713f57ff0d02904fc45f.jpg",
     "static/media/dashboard_route.mp4": "/static/media/dashboard_route.408ed347311f98f441de.mp4",
+    "static/media/oldwebsite.png": "/static/media/oldwebsite.1700e032a6351d368883.png",
     "static/media/demo.gif": "/static/media/demo.2d14aa9f8da6eb1f2c04.gif",
     "static/media/amosprototype.svg": "/static/media/amosprototype.da61e93a48e044607aaa62a2350afaaa.svg",
     "static/media/landingpages.png": "/static/media/landingpages.3e658b7b87e32551ee15.png",
@@ -69,12 +70,12 @@
     "static/media/GamePosts.csv": "/static/media/GamePosts.958d2ae174e3bc1c676b.csv",
     "index.html": "/index.html",
     "static/media/Projects.csv": "/static/media/Projects.f0050af2f0ea02c74ce8.csv",
-    "main.2ff64973.css.map": "/static/css/main.2ff64973.css.map",
-    "main.30dda8ff.js.map": "/static/js/main.30dda8ff.js.map",
+    "main.01fc331b.css.map": "/static/css/main.01fc331b.css.map",
+    "main.9d37b650.js.map": "/static/js/main.9d37b650.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ff64973.css",
-    "static/js/main.30dda8ff.js"
+    "static/css/main.01fc331b.css",
+    "static/js/main.9d37b650.js"
   ]
 }
