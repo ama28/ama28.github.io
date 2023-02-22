@@ -607,6 +607,10 @@ select option {
   font-weight: 300;
 }
 
+.aboutWebsite b {
+  font-weight: 900;
+}
+
 .aboutWebsite img {
   max-height: 300px;
   margin-right: 40px;
