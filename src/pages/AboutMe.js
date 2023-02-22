@@ -93,6 +93,8 @@ class AboutMe extends Component {
                             description={this.props.gamePosts[this.props.gamePosts.length-1].description}
                             imageURL={this.props.gamePosts[this.props.gamePosts.length-1].imageURL}
                             starCount={this.props.gamePosts[this.props.gamePosts.length-1].starCount}
+                            headers={this.props.gamePosts[this.props.gamePosts.length-1].headers}
+                            content={this.props.gamePosts[this.props.gamePosts.length-1].content}
                             articlelink={this.props.gamePosts[this.props.gamePosts.length-1].articlelink}
                         />
 
