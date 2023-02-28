@@ -13,6 +13,7 @@ export default class ProjectOverview extends Component {
         // duration
         // team
         // mentors
+        // tools
         // imageURL
         <div className={'headerContainer'} 
             style={{backgroundImage: `url('${process.env.PUBLIC_URL}/assets/images/darkened_background.jpg')`,

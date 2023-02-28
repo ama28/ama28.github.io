@@ -3,6 +3,7 @@ import '../App.css';
 import ProjectSquare from '../components/ProjectSquare';
 import PageHeader from '../components/PageHeader';
 import NavBar from '../components/NavBar';
+import { Link } from 'react-router-dom';
 
 class Work extends Component {
     constructor(props) {
@@ -28,6 +29,7 @@ class Work extends Component {
                         imageURL={item.imageURL}
                         title={item.title}
                         route={item.route}
+                        altRoute={item.altRoute}
                         skills={item.skills}
                         category={item.category}/>
         })
@@ -74,7 +76,7 @@ class Work extends Component {
                     </div>
 
                     {/* ========== See Archive Button ========== */}
-                    {/* <Link to='/archive' className='rectButton hvr-shutter-out-horizontal'>SEE ARCHIVE</Link> */}
+                    <Link to='/archive' className='rectButton hvr-shutter-out-horizontal'>SEE ARCHIVE</Link>
                 </div>
             </div>
         );

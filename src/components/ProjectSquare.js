@@ -50,7 +50,8 @@ class ProjectSquare extends Component {
             backgroundPosition: 'center center',
         }
         return (
-            this.checkIfShouldBeRendered() ?
+            (this.checkIfShouldBeRendered()) ?
+                (this.props.altRoute == "") ? 
                 <Link to={'/' + this.props.route} onMouseOver={this.onHovering} onMouseOut={this.offHovering}>
                     <div className='projectContainer dropShadow'>
                         <div className={`projectSquare ${this.state.hovering ? 'zoomed' : ''}`} style={squareStyle}>
@@ -64,7 +65,22 @@ class ProjectSquare extends Component {
                             </div>
                         </div>
                     </div>
-                </Link> : null
+                </Link> : 
+                <a href={this.props.altRoute} onMouseOver={this.onHovering} onMouseOut={this.offHovering} target='_blank'>
+                    <div className='projectContainer dropShadow'>
+                        <div className={`projectSquare ${this.state.hovering ? 'zoomed' : ''}`} style={squareStyle}>
+                            <div className={`projectOverlayContainer ${this.state.hovering ? 'visible' : ''}`}>
+                                <div className={`projectHeaderContainer ${this.state.hovering ? "hovering" : ""}`}>
+                                    <span className='projectTitle'>{this.props.title}</span>
+                                    <span className='projectDivider long'></span>
+                                    <span className='projectDivider short'></span>
+                                    <span className='projectSkills'>{this.props.skills}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            : null
         );
     }
 }

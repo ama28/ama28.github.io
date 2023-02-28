@@ -13,6 +13,7 @@ import Archive from './pages/Archive';
 import Papa from "papaparse";
 import GamePosts from './GamePosts.csv';
 import Projects from './Projects.csv';
+import ArchiveProjects from './ArchiveProjects.csv'
 import DimensionalRift from './pages/projectPages/DimensionalRift';
 import Spin from './pages/projectPages/Spin';
 import C1 from './pages/projectPages/C1';
@@ -21,6 +22,8 @@ import FitSaber from './pages/projectPages/FitSaber';
 import Amos from './pages/projectPages/Amos';
 import EscapeDartist from './pages/projectPages/EscapeDartist';
 import Eachday from './pages/projectPages/Eachday';
+import BookScout from './pages/archivePages/BookScout';
+import AC from './pages/archivePages/AC';
 
 class App extends Component {
   constructor(props) {
@@ -35,6 +38,7 @@ class App extends Component {
     }
     this.updateGameData = this.updateGameData.bind(this)
     this.updateProjectData = this.updateProjectData.bind(this)
+    this.updateArchiveData = this.updateArchiveData.bind(this)
   }
 
   /* Changes background when switching a page 
@@ -63,6 +67,13 @@ class App extends Component {
       skipEmptyLines: true,
       complete: this.updateProjectData
     });
+
+    Papa.parse(ArchiveProjects, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: this.updateArchiveData
+    });
   }
 
   /* Filter data from the parsed projects csv into the projects state variable*/
@@ -71,6 +82,7 @@ class App extends Component {
       return {
         title: project.title,
         route: project.title.replace(/\s/g, ''),
+        altRoute: project.altRoute,
         imageURL: `url(${process.env.PUBLIC_URL}/assets/images/` + project.imageURL + `)`,
         skills: project.skills,
         category: {
@@ -81,6 +93,24 @@ class App extends Component {
       }
     })
     this.setState({projects: data});
+  }
+
+  updateArchiveData(result) {
+    const data = result.data.map((project, idx) => {
+      return {
+        title: project.title,
+        route: project.title.replace(/\s/g, ''),
+        altRoute: project.altRoute,
+        imageURL: `url(${process.env.PUBLIC_URL}/assets/images/` + project.imageURL + `)`,
+        skills: project.skills,
+        category: {
+          design: project.category.includes("design"),
+          games: project.category.includes("games"),
+          research: project.category.includes("research"),
+        },
+      }
+    })
+    this.setState({archivedProjects: data});
   }
 
   /* Helper function for updateGameData: reformats any image entry in the csv in the form, 
@@ -159,6 +189,8 @@ class App extends Component {
             <Route path="/EscapeDartistVR" element={<EscapeDartist switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             <Route path="/Eachday" element={<Eachday switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             {/* archive */}
+            <Route path="/BookScout" element={<BookScout switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/ACControlRedesign" element={<AC switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
           </Routes>
 
           <Footer />

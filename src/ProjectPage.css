@@ -288,6 +288,14 @@ li {
   margin: 0px;
 }
 
+.row > video {
+  max-height: 300px;
+  max-width: 47%;
+  flex: 1 1 auto;
+  border-radius: 2px;
+  margin: 0px;
+}
+
 .row > .sameHeight {
   max-width: none;
   max-height: 300px;

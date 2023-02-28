@@ -25,11 +25,13 @@ class Archive extends Component {
             return <ProjectSquare
                         key={idx}
                         filterMode={this.state.filterMode}
-                        backgroundImgURL={item.backgroundImgURL}
+                        imageURL={item.imageURL}
                         title={item.title}
+                        route={item.route}
+                        altRoute={item.altRoute}
                         skills={item.skills}
                         category={item.category}/>
-        })
+            })
     }
     
     render() {
