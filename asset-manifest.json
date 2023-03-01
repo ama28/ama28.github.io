@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d5a10146.css",
-    "main.js": "/static/js/main.5ff1f515.js",
+    "main.js": "/static/js/main.363215e7.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/bookscoutdemo.mp4": "/static/media/bookscoutdemo.f016ed6bcbba9da598b0.mp4",
     "static/media/acdemo.mp4": "/static/media/acdemo.ae832a60ce476afb68c5.mp4",
@@ -82,15 +82,15 @@
     "static/media/logo.png": "/static/media/logo.c4e9164bcf48dbd5079f.png",
     "static/media/endless-clouds.svg": "/static/media/endless-clouds.874e3703968b8d2e6fbb.svg",
     "static/media/GamePosts.csv": "/static/media/GamePosts.adaf10d6c7f6fb1acd0f.csv",
-    "static/media/ArchiveProjects.csv": "/static/media/ArchiveProjects.81026428531d0a2b4f4f.csv",
+    "static/media/ArchiveProjects.csv": "/static/media/ArchiveProjects.cbf285f914e47f41bc91.csv",
     "index.html": "/index.html",
     "static/media/Projects.csv": "/static/media/Projects.2c668f6f0cd1c751078c.csv",
     "main.d5a10146.css.map": "/static/css/main.d5a10146.css.map",
-    "main.5ff1f515.js.map": "/static/js/main.5ff1f515.js.map",
+    "main.363215e7.js.map": "/static/js/main.363215e7.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d5a10146.css",
-    "static/js/main.5ff1f515.js"
+    "static/js/main.363215e7.js"
   ]
 }
