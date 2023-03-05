@@ -35,7 +35,7 @@ class Footer extends Component {
                             <Link to='/'>WORK</Link>
                             <Link to='/about'>ABOUT</Link>
                             <Link to='/archive'>ARCHIVE</Link>
-                            <a target='_blank' href='https://drive.google.com/file/d/1bb1jFV-0INpLqgFaSdcnEsfAGBrajmkX/view?usp=sharing'>RESUME</a>
+                            <a target='_blank' href='https://drive.google.com/file/d/1heoia-e0_stHGbhGD4T8HptEigCY1B6t/view?usp=sharing'>RESUME</a>
                             <Link to='/about'>GALLERY</Link>
                             <Link to='/games'>GAMES</Link>
                         </div>
