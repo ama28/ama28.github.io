@@ -63,7 +63,7 @@ class Work extends Component {
                             <select onChange={this.switchFilterMode}>
                                 <option value='All'>ALL</option>
                                 <option value='Design'>UX DESIGN</option>
-                                <option value='Games'>GAMES</option>
+                                <option value='Games' selected="selected">GAMES</option>
                                 <option value='Research'>RESEARCH</option>
                             </select>
                             <span className='down arrow'></span>
