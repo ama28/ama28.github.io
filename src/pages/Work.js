@@ -9,7 +9,7 @@ class Work extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filterMode:'All',
+            filterMode:'Games',
         }
     }
 
@@ -38,9 +38,9 @@ class Work extends Component {
     render() {
         const description = 
             <div className='introDescription'>
-                <b>Adrian Ma</b> is a designer focused on creating <span className='semiBold' style={{color: '#90EE90'}}>
+                <b>Adrian Ma</b> is a game designer focused on creating <span className='semiBold' style={{color: '#90EE90'}}>
                 transformative,</span> <span className='semiBold' style={{color: '#FFFF00'}}> immersive,</span> and 
-                <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> experiences. 
+                <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> real-time experiences. 
             </div>
 
         return(

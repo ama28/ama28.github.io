@@ -35,13 +35,13 @@ class Footer extends Component {
                             <Link to='/'>WORK</Link>
                             <Link to='/about'>ABOUT</Link>
                             <Link to='/archive'>ARCHIVE</Link>
-                            <a target='_blank' href='https://drive.google.com/file/d/1heoia-e0_stHGbhGD4T8HptEigCY1B6t/view?usp=sharing'>RESUME</a>
+                            <a target='_blank' href='https://docs.google.com/document/d/1s1sjBssLC0LS-1ClqeaMErWVwl9F-5AlFyeqleDR2hQ/edit?usp=sharing'>RESUME</a>
                             <Link to='/about'>GALLERY</Link>
                             <Link to='/games'>GAMES</Link>
                         </div>
                     </div>
                     <div className='footerCopyrightContainer'>
-                        <span className='copyrightText'>© Copyright 2022 Adrian Ma</span>
+                        <span className='copyrightText'>© Copyright 2023 Adrian Ma</span>
                     </div>
                 </div>
             </div>

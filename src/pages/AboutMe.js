@@ -53,7 +53,7 @@ class AboutMe extends Component {
                             <div className='aboutTitle'>Hi, I'm Adrian</div>
                             <div className='aboutDescription'>
                                 <p>My goal is to design digital experiences that can leave a long-lasting impact on those who use them and to explore and develop new ways through which we can interact with technology. </p>
-                                <p>I'm currently a student at Carnegie Mellon University studying Cognitive Science, Human-Computer Interaction, Game Design, and Animation.</p>
+                                <p>I graduated from Carnegie Mellon University in 2023 with degrees in Cognitive Science, Human-Computer Interaction, Game Design, and Animation, and am now working as an Associate Game Designer at Kooapps.</p>
                             </div>
                             {/* ------ Links to External Sites ------ */}
                             <div className='aboutLinks'>
