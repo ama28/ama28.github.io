@@ -9,7 +9,7 @@ class Work extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filterMode:'Games',
+            filterMode:'All',
         }
     }
 
@@ -37,10 +37,11 @@ class Work extends Component {
 
     render() {
         const description = 
-            <div className='introDescription'>
-                <b>Adrian Ma</b> is a game designer focused on creating <span className='semiBold' style={{color: '#90EE90'}}>
+            <div className='introDescription'  style={{fontSize: '50px'}}>
+                <b>ADRIAN MA</b> <span className='semiBold' style={{color: '#FFFF00'}}>/</span> <span className='semiBold' style={{color: '#90EE90'}}>Game & Systems Designer</span>
+                {/* <b>Adrian Ma</b> is a game designer focused on innovative the social creating <span className='semiBold' style={{color: '#90EE90'}}>
                 transformative,</span> <span className='semiBold' style={{color: '#FFFF00'}}> immersive,</span> and 
-                <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> real-time experiences. 
+                <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> real-time experiences.  */}
             </div>
 
         return(
@@ -52,12 +53,13 @@ class Work extends Component {
 
                 {/* ========== Introduction at the Top of the Work Page ========== */}
                 <PageHeader 
+                    bar = {false}
                     styledDescription={description}/>
 
                 <div className='workContentContainer'>
                     {/* ========== Filter Button ========== */}
 
-                    <div className='filterContainer' style={{backgroundImage: `${process.env.PUBLIC_URL}/assets/images/Vector.svg`}}>
+                    {/* <div className='filterContainer' style={{backgroundImage: `${process.env.PUBLIC_URL}/assets/images/Vector.svg`}}>
                         <span className='filterLabel'>Filter by: </span>
                         <div className='filterButtonContainer'>
                             <select onChange={this.switchFilterMode}>
@@ -68,7 +70,7 @@ class Work extends Component {
                             </select>
                             <span className='down arrow'></span>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* ========== Grid of Projects ========== */}
                     <div className='projectGridContainer'>

@@ -31,16 +31,14 @@ export default class EscapeDartist extends Component {
                         <ul>
                             <li>Contributing to and maintaining a game design document</li>
                             <li>Brainstorming gameplay elements and iterating on these mechanics through playtesting</li>
-                            <li>Designing the game's levels and implementing them in Unity</li>
+                            <li>Designing the game's levels, blocking them out, and implementing them in Unity</li>
                             <li>Integrating different team members' work</li>
                         </ul>
+                        <img src={require('../../images/escapedartistassets/escapedartistlevel.png')}></img>
                     </div>
                     <div>
                         <iframe allow="fullscreen;" width="420" height="315" style={{border:'0', marginBottom:'20px'}}
-                        src="https://www.youtube.com/embed/1a9-9AhRGE8 "></iframe>
-                        <div className='center'>
-                            <span>Note: recording is much darker than the actual game</span>
-                        </div>
+                        src="https://www.youtube.com/embed/05UpvOz3278?si=CC6ymhTlSlU-HW2N"></iframe>
                     </div>
                 </div>
                 <iframe style={{border: 'none'}} src="https://itch.io/embed/1916007?dark=true" width="552" height="167"><a href="https://adrianma.itch.io/escape-dartist">Escape Dartist by adrianma</a></iframe>

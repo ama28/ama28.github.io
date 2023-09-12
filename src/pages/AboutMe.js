@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import GamePost from '../components/GamePost';
+import BlogPost from '../components/BlogPost';
 import NavBar from '../components/NavBar';
 import {
     Link,
@@ -79,7 +80,27 @@ class AboutMe extends Component {
 
                     {/* ------ Game Blog Callout ------ */}
                     <div className='aboutCallout gameCorner'>
-                        <div className='aboutCalloutTitle'>Adrian's Game Corner</div>
+                        <div className='aboutCalloutTitle'>My Game Design Blog</div>
+
+                        <div className='calloutSubHeader'>
+                            <span className='calloutSubHeadLine'></span>
+                            <div>LATEST POST</div>
+                            <span className='calloutSubHeadLine'></span>
+                        </div>
+
+                        {/* ------ Featured Game Post ------ */}
+                        <BlogPost 
+                            title={"How Damage Scaling Holds Fighting Games Together"}
+                            description={"Fighting games are, without a doubt, some of the hardest games to develop. Due to their extremely competitive nature, which hinges on micro-interactions, design elements such as clean animations, rollback netcode, clear feedback, and many others become necessities rather than elements of polish. However, in my opinion, the hardest aspect of designing a fighting game is making it feel balanced."}
+                            imageURL={require('../images/ryu.png')}
+                            articlelink={'https://www.superjumpmagazine.com/how-damage-scaling-holds-fighting-games-together/'}
+                        />
+
+                        <Link to='https://www.superjumpmagazine.com/author/adrian/' target="_blank" className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
+                    </div>
+
+                    <div className='aboutCallout gameCorner'>
+                        <div className='aboutCalloutTitle'>Game Reviews</div>
 
                         <div className='calloutSubHeader'>
                             <span className='calloutSubHeadLine'></span>
@@ -100,40 +121,16 @@ class AboutMe extends Component {
 
                         <Link to='/games' className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
                     </div>
-
-                    {/* ------ Gallery Callout ------ */}
-                    <div className='aboutCallout artAndMore'>
-                        <div className='aboutCalloutTitle'>Art, Graphic Design, &#38; More!</div>
-
-                        <div className='calloutSubHeader'>
-                            <span className='calloutSubHeadLine'></span>
-                            <div>FEATURED WORK</div>
-                            <span className='calloutSubHeadLine'></span>
-                        </div>
-                        
-                        {/* gallery preview for now — very manual, needs to be refactored */}
-                        <div className='aboutCalloutGallery'>
-                            <div className='galleryLeft'>
-                                {this.renderGalleryPreview()}
-                            </div>
-                            <img src={`${process.env.PUBLIC_URL + "/assets/images/DungeonP_screen.png"}`} className="dropShadow" alt='an example of my artwork'></img>
-                        </div>
-
-                        <div className='rectButton small' style={{opacity: '40%'}}>UNDER CONSTRUCTION</div>
-                    </div>
                 </div>
 
                 <div className='aboutWebsiteContainer'>
-                    <h1>This Website</h1>
                     <div className='aboutWebsite'>
                         <a href='https://ama28.github.io/websiteV3/' target='_blank'><img src={require('../images/oldwebsite.png')}></img></a>
                         <div>
+                            <h1>This Website</h1>
                             <p>This website is my third iteration of a portfolio site (second iteration on the left), and was <b>built from scratch using React without the use of any component libraries like Bootstrap.</b> <br></br><br></br>I’ve designed a lot of websites, but never really understood the experiences of the developers that would have to implement my designs. <b>This project serves to help me bridge that gap so that I can better understand developer needs in my future work.</b> </p>
                             <p>The most crucial problem with my previous iterations was the difficulty of adding new content. The third iteration incorporates a better user experience and solves this problem through <b>a system I created with the Papa Parse package that allows me to add new content to the site through csv files, without needing to touch even a line of code.</b> </p>
                         </div>
-                    </div>
-                    <div className='aboutWebsite'>
-                        <p><b>The content on this site serves not only as a way to display my experience to employers, but also as a way to ensure that I continue growing as a designer.</b> Each time I undertake a project, my perspective on the design process evolves as I work with different audiences in different contexts. Documenting my experiences here helps me avoid mistakes I’ve made in the past and bring insights that I discover into every project that follows. </p>
                     </div>
                 </div>
             </div>

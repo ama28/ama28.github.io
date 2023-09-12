@@ -84,6 +84,7 @@ class Games extends Component {
 
                 {/* ========== Header for Games Page ========== */}
                 <PageHeader
+                    bar = {true}
                     currentPage={this.props.currentPage}
                     title="Adrian's Game Corner"
                     normalDescription="If it wasn't obvious already, I love games! Here are my opinions on some of the games I've played and the impact they have left on me."

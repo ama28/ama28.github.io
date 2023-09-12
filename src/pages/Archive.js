@@ -44,6 +44,7 @@ class Archive extends Component {
 
                 {/* ========== Header for Archive Page ========== */}
                 <PageHeader
+                    bar={true}
                     currentPage='Archive'
                     title="Archived Projects"
                     normalDescription="A collection of older projects, personal projects, or some that are just smaller in scope!"
