@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d5a10146.css",
-    "main.js": "/static/js/main.38352e05.js",
+    "main.css": "/static/css/main.9c982165.css",
+    "main.js": "/static/js/main.a4ac879e.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/bookscoutdemo.mp4": "/static/media/bookscoutdemo.f016ed6bcbba9da598b0.mp4",
     "static/media/acdemo.mp4": "/static/media/acdemo.ae832a60ce476afb68c5.mp4",
@@ -23,6 +23,7 @@
     "static/media/paces.gif": "/static/media/paces.439bd8738d86a48a81f3.gif",
     "static/media/amosquotes.svg": "/static/media/amosquotes.408bb48fa4f8ae77182af9623789fdf9.svg",
     "static/media/researchfindings.png": "/static/media/researchfindings.c07ab0aeb46603ca6485.png",
+    "static/media/ryu.png": "/static/media/ryu.302e069a4fe8f3a5c1b7.png",
     "static/media/battleUI.png": "/static/media/battleUI.11073c846513f512b0a0.png",
     "static/media/utep.png": "/static/media/utep.cae061d147b79b1ce789.png",
     "static/media/DR_SC2.png": "/static/media/DR_SC2.77973d409a3b344421b7.png",
@@ -59,6 +60,7 @@
     "static/media/currentnav.png": "/static/media/currentnav.7e43746fe2604067a751.png",
     "static/media/acoriginal.png": "/static/media/acoriginal.c56bd18b017166d8ca9b.png",
     "static/media/pulse-audience.png": "/static/media/pulse-audience.932a69e279859216c571.png",
+    "static/media/escapedartistlevel.png": "/static/media/escapedartistlevel.f28693c68c1b5610c7a8.png",
     "static/media/acprototype.png": "/static/media/acprototype.be633c140e20d74ad1d5.png",
     "static/media/gameexample.png": "/static/media/gameexample.d098aa6763ced2e95268.png",
     "static/media/techconstraints.png": "/static/media/techconstraints.204df7c5ecaa25bbce99.png",
@@ -82,15 +84,15 @@
     "static/media/logo.png": "/static/media/logo.c4e9164bcf48dbd5079f.png",
     "static/media/endless-clouds.svg": "/static/media/endless-clouds.874e3703968b8d2e6fbb.svg",
     "static/media/GamePosts.csv": "/static/media/GamePosts.adaf10d6c7f6fb1acd0f.csv",
-    "static/media/ArchiveProjects.csv": "/static/media/ArchiveProjects.5f6cc6f56d51225404bf.csv",
-    "static/media/Projects.csv": "/static/media/Projects.5c8ef337b2e1171ce091.csv",
+    "static/media/Projects.csv": "/static/media/Projects.caafefee2f0cea91ef53.csv",
     "index.html": "/index.html",
-    "main.d5a10146.css.map": "/static/css/main.d5a10146.css.map",
-    "main.38352e05.js.map": "/static/js/main.38352e05.js.map",
+    "static/media/ArchiveProjects.csv": "/static/media/ArchiveProjects.c555a660958241e6f00a.csv",
+    "main.9c982165.css.map": "/static/css/main.9c982165.css.map",
+    "main.a4ac879e.js.map": "/static/js/main.a4ac879e.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5a10146.css",
-    "static/js/main.38352e05.js"
+    "static/css/main.9c982165.css",
+    "static/js/main.a4ac879e.js"
   ]
 }
