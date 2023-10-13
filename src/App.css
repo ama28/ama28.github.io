@@ -242,6 +242,16 @@ a.currentNavButton.dark {
   font-weight: 600;
 }
 
+/* ================= Carousel Styles =================*/
+.vidCarouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48.5vw;
+  margin: auto;
+  padding: 0px;
+}
+
 /* ================= Work Page Projects Section Styles =================*/
 
 .workContentContainer {
@@ -250,7 +260,7 @@ a.currentNavButton.dark {
   justify-content: flex-start;
   align-items: flex-end;
   width: auto;
-  margin: 40px 120px;
+  margin: 80px 120px 40px 120px;
   gap: 30px;
   margin-bottom: 100px;
 }
@@ -977,5 +987,10 @@ select option {
   .modalContent img {
     width: 80%;
     margin: auto;
+  }
+
+  /* ----- Video Carousel -----*/
+  vidCarouselContainer {
+    width: 90%;
   }
 }
