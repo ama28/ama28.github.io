@@ -15,7 +15,6 @@ export default class Eachday extends Component {
           imageURL={require('../../images/eachdayassets/eachdaysample.png')}
           titleImage={require('../../images/eachdayassets/eachday.png')}
           description="Gamifying ADHD education and self-management for clinical patients"
-          websitelink='https://www.eachday.health/'
           roles="Game Designer, UX Designer"
           duration="6 months (ongoing)"
           mentors="Erik Harpstead, Christian Murphy"
@@ -86,7 +85,7 @@ export default class Eachday extends Component {
             <div className='sectionContainer'>
                 <h2>Paper Prototyping</h2>
                 <p style={{marginBottom:'0px'}}>With some ideas in place, I created a paper prototype of the battle system and ran think-aloud usability tests with four ADHD patients from a local school. </p>
-                <div className='row' style={{marginTop:'40px'}}>
+                <div className='row' style={{marginTop:'40px', marginBottom:'50px'}}>
                     <iframe className='sameHeight'style={{border: '1px solid rgba(0, 0, 0, 0.1)', margin:'0px'}} width="500" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FN2Xz5W67a3qwjcDpzXJzJd%2FWesley-Research-Synthesis%3Fnode-id%3D0%253A1%26t%3DZ1RuIXbiuHYI3seJ-1" allowfullscreen></iframe>
                     <img className='sameHeight' src={require('../../images/eachdayassets/paper.jpg')}></img>
                 </div>

@@ -13,7 +13,7 @@ export default class EscapeDartist extends Component {
           alwaysWhite={true}/>
         <ProjectOverview
           imageURL={require('../../images/escapedartistassets/gif.gif')}
-          titleImage={require('../../images/escapedartistassets/logo.png')}
+          title={"Escape Dartist"}
           description="A VR stealth game where you escape security drones using darts to both move and attack"
           itchlink='https://adrianma.itch.io/escape-dartist'
           githublink='https://github.com/noorh96/Lawn-Darts-VR'
@@ -34,13 +34,13 @@ export default class EscapeDartist extends Component {
                             <li>Designing the game's levels, blocking them out, and implementing them in Unity</li>
                             <li>Integrating different team members' work</li>
                         </ul>
-                        <img src={require('../../images/escapedartistassets/escapedartistlevel.png')}></img>
                     </div>
                     <div>
                         <iframe allow="fullscreen;" width="420" height="315" style={{border:'0', marginBottom:'20px'}}
-                        src="https://www.youtube.com/embed/05UpvOz3278?si=CC6ymhTlSlU-HW2N"></iframe>
+                        src="https://www.youtube.com/embed/l8gRlFFCwc8?si=s9VT9C2f8gRBdmci"></iframe>
                     </div>
                 </div>
+                  <img style={{margin: '10px', maxWidth: '60%'}} src={require('../../images/escapedartistassets/escapedartistlevel.png')}></img>
                 <iframe style={{border: 'none'}} src="https://itch.io/embed/1916007?dark=true" width="552" height="167"><a href="https://adrianma.itch.io/escape-dartist">Escape Dartist by adrianma</a></iframe>
             </div>
         </div>

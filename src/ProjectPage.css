@@ -88,6 +88,7 @@
 }
 
 li {
+  font-weight: 500;
   margin: 15px 0px;
 }
 
@@ -148,9 +149,9 @@ li {
 .headerContainer {
   display: flex;
   justify-content: center;
-  height: 80vh;
-  width: 100%;
-  margin-top: 9vh;
+  height: 65vh;
+  width: 80%;
+  margin: 9vh auto auto auto;
 }
 
 .leftHalf {
@@ -161,8 +162,9 @@ li {
 }
 
 .projectOverview  {
-  width: 72%;
+  width: 100%;
   color: white;
+  margin: 0px;
 }
 
 .projectOverview img {
@@ -269,7 +271,7 @@ li {
   align-items: center;
   gap: 60px;
   padding: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .row > p {

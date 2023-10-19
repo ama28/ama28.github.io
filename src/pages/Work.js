@@ -45,7 +45,7 @@ class Work extends Component {
     render() {
         const description =
             <div className='introDescription' style={{ fontSize: '50px' }}>
-                <span>ADRIAN MA</span> <span className='semiBold' style={{ color: '#FFFF00' }}>/</span> <span className='semiBold' style={{ color: '#90EE90' }}>Game Designer</span>
+                <b>ADRIAN MA</b> <span className='semiBold' style={{ color: '#FFFF00' }}>/</span> <span className='semiBold' style={{ color: '#90EE90' }}>Game Designer</span>
                 {/* <b>Adrian Ma</b> is a game designer focused on innovative the social creating <span className='semiBold' style={{color: '#90EE90'}}>
                 transformative,</span> <span className='semiBold' style={{color: '#FFFF00'}}> immersive,</span> and 
                 <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> real-time experiences.  */}
@@ -82,7 +82,7 @@ class Work extends Component {
                         <YoutubeSlide key="escape-dartist" url="https://www.youtube.com/embed/l8gRlFFCwc8?si=s9VT9C2f8gRBdmci" />
                         <YoutubeSlide key="dimensional-rift" url="https://www.youtube.com/embed/TBNidA8OgGw" />
                         <YoutubeSlide key="tanks-in-advance" url="https://www.youtube.com/embed/uhIsBM8HQNk?si=ktmJVtbGx887g_ia" />
-                        {/* <YoutubeSlide key="space-shank" url="https://www.youtube.com/embed/Va5KK0SSgMc?si=2W8i1Na2YsrrLYEW" /> */}
+                        <YoutubeSlide key="space-shank" url="https://www.youtube.com/embed/Va5KK0SSgMc?si=2W8i1Na2YsrrLYEW" />
                         {/* <YoutubeSlide key="split" url="https://www.youtube.com/embed/d4vYNQTEoBo?si=A6HTmPGdt1eOnKDs" /> */}
                         {/* <YoutubeSlide key="gale-guardians" url="https://www.youtube.com/embed/6wQmp32qHsw?si=uRVhTkqWv6wA9vjp" /> */}
                         {/* <YoutubeSlide key="backslash" url="https://www.youtube.com/embed/MqZTwkDbLjE?si=70GuCk17_8P3ik04" /> */}

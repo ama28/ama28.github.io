@@ -96,7 +96,7 @@ class AboutMe extends Component {
                             articlelink={'https://www.superjumpmagazine.com/how-damage-scaling-holds-fighting-games-together/'}
                         />
 
-                        <Link to='https://www.superjumpmagazine.com/author/adrian/' target="_blank" className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
+                        <Link to='https://www.superjumpmagazine.com/author/adrianma/' target="_blank" className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
                     </div>
 
                     <div className='aboutCallout gameCorner'>

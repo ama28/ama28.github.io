@@ -24,6 +24,9 @@ import EscapeDartist from './pages/projectPages/EscapeDartist';
 import Eachday from './pages/projectPages/Eachday';
 import BookScout from './pages/archivePages/BookScout';
 import AC from './pages/archivePages/AC';
+import Heuristicats from './pages/projectPages/Heuristicats';
+import SpaceShank from './pages/projectPages/SpaceShank';
+import TanksInAdvance from './pages/projectPages/TanksInAdvance';
 
 class App extends Component {
   constructor(props) {
@@ -188,6 +191,9 @@ class App extends Component {
             <Route path="/Amos" element={<Amos switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             <Route path="/EscapeDartistVR" element={<EscapeDartist switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             <Route path="/Eachday" element={<Eachday switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/Heuristicats" element={<Heuristicats switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/SpaceShank" element={<SpaceShank switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
+            <Route path="/TanksInAdvance" element={<TanksInAdvance switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             {/* archive */}
             <Route path="/BookScout" element={<BookScout switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
             <Route path="/ACControlRedesign" element={<AC switchPage={this.switchPage.bind(this)} currentPage={this.state.currentPage}/>}/>
