@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba1a4b2e.css",
-    "main.js": "/static/js/main.23d60d3c.js",
+    "main.css": "/static/css/main.af1f2c55.css",
+    "main.js": "/static/js/main.cdbbeb53.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
+    "static/media/gdd.pdf": "/static/media/gdd.44c152d81aa4c49b5d14.pdf",
     "static/media/bookscoutdemo.mp4": "/static/media/bookscoutdemo.f016ed6bcbba9da598b0.mp4",
     "static/media/acdemo.mp4": "/static/media/acdemo.ae832a60ce476afb68c5.mp4",
     "static/media/KalenAddStop.mp4": "/static/media/KalenAddStop.4ff32391e513d8760be5.mp4",
@@ -13,6 +14,7 @@
     "static/media/oldwebsite.png": "/static/media/oldwebsite.1700e032a6351d368883.png",
     "static/media/demo.gif": "/static/media/demo.2d14aa9f8da6eb1f2c04.gif",
     "static/media/amosprototype.svg": "/static/media/amosprototype.da61e93a48e044607aaa62a2350afaaa.svg",
+    "static/media/TIA_Cover.png": "/static/media/TIA_Cover.ace644a778d76d53aa3f.png",
     "static/media/landingpages.png": "/static/media/landingpages.3e658b7b87e32551ee15.png",
     "static/media/spinexample.png": "/static/media/spinexample.ac7d6f8d93dba86ed641.png",
     "static/media/nav-analysis.png": "/static/media/nav-analysis.4afbe8df1e62e0921f61.png",
@@ -23,6 +25,7 @@
     "static/media/paces.gif": "/static/media/paces.439bd8738d86a48a81f3.gif",
     "static/media/amosquotes.svg": "/static/media/amosquotes.408bb48fa4f8ae77182af9623789fdf9.svg",
     "static/media/researchfindings.png": "/static/media/researchfindings.c07ab0aeb46603ca6485.png",
+    "static/media/title_screen.png": "/static/media/title_screen.219dd10402123d91e3a4.png",
     "static/media/ryu.png": "/static/media/ryu.302e069a4fe8f3a5c1b7.png",
     "static/media/battleUI.png": "/static/media/battleUI.11073c846513f512b0a0.png",
     "static/media/utep.png": "/static/media/utep.cae061d147b79b1ce789.png",
@@ -33,6 +36,7 @@
     "static/media/wireframe.JPG": "/static/media/wireframe.51dfda1ce6ee7641c8cd.JPG",
     "static/media/eachdaysample.png": "/static/media/eachdaysample.112d08b8b25dda230ab3.png",
     "static/media/hackathonstoryboard.jpg": "/static/media/hackathonstoryboard.70a9ea4a828dacdb3d36.jpg",
+    "static/media/gameplay.png": "/static/media/gameplay.ccd2b03c29376b936e9d.png",
     "static/media/kalengraph.png": "/static/media/kalengraph.6a1d3770db9510f92d27.png",
     "static/media/flagstoryboard.jpg": "/static/media/flagstoryboard.f874e13bd086abd81602.jpg",
     "static/media/painpoint1ref.png": "/static/media/painpoint1ref.d88dd36e1347f24bebb4.png",
@@ -55,6 +59,7 @@
     "static/media/miapainpoints.png": "/static/media/miapainpoints.a7880f02bdefa8f6f3a5.png",
     "static/media/amosprototype.png": "/static/media/amosprototype.71184234edc71cbfb7ad.png",
     "static/media/spinprocess.png": "/static/media/spinprocess.5676a4455f6bd748036c.png",
+    "static/media/spaceshank.jpg": "/static/media/spaceshank.3be6382ca14e094db47e.jpg",
     "static/media/kalenimproved.png": "/static/media/kalenimproved.31904704c5b74b76738c.png",
     "static/media/miaimproved.png": "/static/media/miaimproved.20001d777dbe0424147a.png",
     "static/media/currentnav.png": "/static/media/currentnav.7e43746fe2604067a751.png",
@@ -69,6 +74,7 @@
     "static/media/pulseconventions.png": "/static/media/pulseconventions.3b24cdc572ec38826b8b.png",
     "static/media/fitsaberconditions.png": "/static/media/fitsaberconditions.96808998f47ded7a3317.png",
     "static/media/amosaffinitydiagram.jpeg": "/static/media/amosaffinitydiagram.1a457cc20b7ca1512d36.jpeg",
+    "static/media/gameplay.jpg": "/static/media/gameplay.df9c1a15a3b8048b46d2.jpg",
     "static/media/wireframes.png": "/static/media/wireframes.53e100a794743b5de754.png",
     "static/media/kalen.png": "/static/media/kalen.d08773279f012ad2d8ac.png",
     "static/media/mia.png": "/static/media/mia.c3abceccdb7080f65b11.png",
@@ -81,18 +87,17 @@
     "static/media/socials.png": "/static/media/socials.e87eb55041f05e27a726.png",
     "static/media/miastatus.png": "/static/media/miastatus.ef201708b00d57d7ede4.png",
     "static/media/capital-one-logo-white.png": "/static/media/capital-one-logo-white.8aaa9ec6b5f07031517e.png",
-    "static/media/logo.png": "/static/media/logo.c4e9164bcf48dbd5079f.png",
     "static/media/endless-clouds.svg": "/static/media/endless-clouds.874e3703968b8d2e6fbb.svg",
     "static/media/GamePosts.csv": "/static/media/GamePosts.adaf10d6c7f6fb1acd0f.csv",
-    "static/media/Projects.csv": "/static/media/Projects.0f1a5a52e19088929fa2.csv",
+    "static/media/ArchiveProjects.csv": "/static/media/ArchiveProjects.0e58bb57f540f917aefd.csv",
     "index.html": "/index.html",
-    "static/media/ArchiveProjects.csv": "/static/media/ArchiveProjects.e74a24750432b7ddbebb.csv",
-    "main.ba1a4b2e.css.map": "/static/css/main.ba1a4b2e.css.map",
-    "main.23d60d3c.js.map": "/static/js/main.23d60d3c.js.map",
+    "static/media/Projects.csv": "/static/media/Projects.179b2200cb8486f95d76.csv",
+    "main.af1f2c55.css.map": "/static/css/main.af1f2c55.css.map",
+    "main.cdbbeb53.js.map": "/static/js/main.cdbbeb53.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba1a4b2e.css",
-    "static/js/main.23d60d3c.js"
+    "static/css/main.af1f2c55.css",
+    "static/js/main.cdbbeb53.js"
   ]
 }
