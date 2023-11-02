@@ -27,6 +27,7 @@ import AC from './pages/archivePages/AC';
 import Heuristicats from './pages/projectPages/Heuristicats';
 import SpaceShank from './pages/projectPages/SpaceShank';
 import TanksInAdvance from './pages/projectPages/TanksInAdvance';
+import ScrollToTop from './components/ScrollToTop';
 
 class App extends Component {
   constructor(props) {
@@ -171,6 +172,7 @@ class App extends Component {
       <div style={backgroundStyle}>
         {/* ======= Navigation Router ======= */}
         <Router>
+          <ScrollToTop></ScrollToTop>
           {/* <NavBar 
             switchPage={this.switchPage.bind(this)}
             currentPage={this.state.currentPage}/> */}

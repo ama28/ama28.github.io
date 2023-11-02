@@ -15,8 +15,8 @@ export default class Eachday extends Component {
           imageURL={require('../../images/eachdayassets/eachdaysample.png')}
           titleImage={require('../../images/eachdayassets/eachday.png')}
           description="Gamifying ADHD education and self-management for clinical patients"
-          roles="Game Designer, UX Designer"
-          duration="6 months (ongoing)"
+          roles="Lead Game Designer, UX Designer"
+          duration="9 months"
           mentors="Erik Harpstead, Christian Murphy"
           tools="Figma, Unity"
           />
@@ -97,7 +97,7 @@ export default class Eachday extends Component {
                 <p style={{marginBottom:'0px'}}>Using the findings, from the usability tests, I further iterated on the battle system’s defining mechanics and began synthesizing these ideas in Figma. I also experimented with different wireframes of the in-game GUI. </p>
                 <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)', marginBottom:'0px'}} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FltqMiltbY1s9KBamYtc3BC%2FBattle-System-Design-Document%3Fnode-id%3D0%253A1%26t%3DhpibN2LeVQgOVm31-1" allowfullscreen></iframe>
                 <img style={{marginTop:'0px'}} src={require('../../images/eachdayassets/battleUI.png')}></img>
-                <p>Currently, I am creating a low-fidelity prototype of the updated battle system in Unity. When this is finished, we will go through another round of user research and game design iteration before beginning development of the game.  </p>
+                <p>I then created a low-fidelity prototype of the updated battle system in Unity for both mobile and web versions of the game. </p>
             </div>
         </div>
       </div>
