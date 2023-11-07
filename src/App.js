@@ -121,10 +121,10 @@ class App extends Component {
      __.jpg/jpeg/svg/png to the format necessary to find the source file in the project */
   formatImages(inputString) {
     let temp = inputString
-    temp = temp.replace(/\w*.jpg\b/, '/assets/images/$&')
-    temp = temp.replace(/\w*.svg\b/, '/assets/images/$&')
-    temp = temp.replace(/\w*.png\b/, '/assets/images/$&')
-    temp = temp.replace(/\w*.jpeg\b/, '/assets/images/$&')
+    temp = temp.replaceAll(/\w*.jpg\b/g, '/assets/images/$&')
+    temp = temp.replaceAll(/\w*.svg\b/g, '/assets/images/$&')
+    temp = temp.replaceAll(/\w*.png\b/g, '/assets/images/$&')
+    temp = temp.replaceAll(/\w*.jpeg\b/g, '/assets/images/$&')
     return temp;
   }
 

@@ -84,7 +84,7 @@ export default function GameModal(props) {
     //regex for finding an image in the format /assets/images/__.jpg or png or svg or jpeg
     const imgRegex = /\/\w+\/\w+\/\w+\.\w+/g
 
-    /* sections delineated by image urls in the scv, each section string begins with a string representing 
+    /* sections delineated by image urls in the csv, each section string begins with a string representing 
        the URL for the image that should precede it */
     let sectionsSplitByImage = brokenParagraph?.split(/(?=\/\w+\/\w+\/\w+\.\w+)/g) 
 
@@ -99,7 +99,7 @@ export default function GameModal(props) {
       let content = sectionsSplitByImage[i]
       //if there is an image url in the section, extract it into a variable (imageLink) then remove it from the original string
       if (sectionsSplitByImage[i].match(imgRegex) != null) {
-        imageLink = <img src={process.env.PUBLIC_URL + sectionsSplitByImage[i].match(imgRegex)} alt='and screenshot from the game being reviewed'></img> 
+        imageLink = <img src={process.env.PUBLIC_URL + sectionsSplitByImage[i].match(imgRegex)} alt='screenshot from the game being reviewed'></img> 
         content = sectionsSplitByImage[i].replace(/\S*.jpeg/, "").replace(/\S*.jpg/, "").replace(/\S*.svg/, "").replace(/\S*.png/, "")
       }
       //add an element containing an image and the section that follows to an array
@@ -118,7 +118,7 @@ export default function GameModal(props) {
             <h2 style={{fontWeight: '600'}}>Score: {props.starCount}/5</h2>
             <p>{props.description}</p>
             {renderArticle()}
-            <p>Check out my deep dive into the game <a href={props.articlelink} target="_blank">here.</a></p>
+            {props.articlelink != "" && <p>Check out my deep dive into the game <a href={props.articlelink} target="_blank">here.</a></p>}
           </div>
           <button className="closeModal" onClick={() => props.closeModal()}>CLOSE</button>
           <div style={SPACER_STYLE}></div>
