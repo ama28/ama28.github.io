@@ -45,7 +45,7 @@ class Work extends Component {
     render() {
         const description =
             <div className='introDescription' style={{ fontSize: '50px' }}>
-                <b>ADRIAN MA</b> <span className='semiBold' style={{ color: '#FFFF00' }}>/</span> <span className='semiBold' style={{ color: '#90EE90' }}>Game Designer</span>
+                <b>ADRIAN MA</b> <span className='semiBold' style={{ color: '#FFFF00' }}>/</span> <span className='semiBold' style={{ color: '#90EE90' }}>Systems Designer</span>
                 {/* <b>Adrian Ma</b> is a game designer focused on innovative the social creating <span className='semiBold' style={{color: '#90EE90'}}>
                 transformative,</span> <span className='semiBold' style={{color: '#FFFF00'}}> immersive,</span> and 
                 <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> real-time experiences.  */}

@@ -86,8 +86,8 @@ class Games extends Component {
                 <PageHeader
                     bar = {true}
                     currentPage={this.props.currentPage}
-                    title="Adrian's Game Corner"
-                    normalDescription="If it wasn't obvious already, I love games! Here are my opinions on some of the games I've played and the impact they have left on me."
+                    title="The Game Corner"
+                    normalDescription="Playing games from different genres and platforms helps me build a game design repertoire that I can pull from when designing. Here I record down learnings from the games I've played and reflect on the impact they had on me!"
                 />
 
                 <div className='workContentContainer games'>
