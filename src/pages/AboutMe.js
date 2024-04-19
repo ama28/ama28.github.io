@@ -37,6 +37,21 @@ class AboutMe extends Component {
         })
     }
 
+    featuredGamePost() {
+        if (this.props.gamePosts[this.props.gamePosts.length-1] != null)
+        {
+            return <GamePost 
+                title={this.props.gamePosts[this.props.gamePosts.length-1].title}
+                description={this.props.gamePosts[this.props.gamePosts.length-1].description}
+                imageURL={this.props.gamePosts[this.props.gamePosts.length-1].imageURL}
+                starCount={this.props.gamePosts[this.props.gamePosts.length-1].starCount}
+                headers={this.props.gamePosts[this.props.gamePosts.length-1].headers}
+                content={this.props.gamePosts[this.props.gamePosts.length-1].content}
+                articlelink={this.props.gamePosts[this.props.gamePosts.length-1].articlelink}
+            />
+        }
+    }   
+
     render() {
         return (
             <div>
@@ -88,7 +103,7 @@ class AboutMe extends Component {
                             <span className='calloutSubHeadLine'></span>
                         </div>
 
-                        {/* ------ Featured Game Post ------ */}
+                        {/* ------ Featured Blog Post ------ */}
                         <BlogPost 
                             title={"How Damage Scaling Holds Fighting Games Together"}
                             description={"Fighting games are, without a doubt, some of the hardest games to develop. Due to their extremely competitive nature, which hinges on micro-interactions, design elements such as clean animations, rollback netcode, clear feedback, and many others become necessities rather than elements of polish. However, in my opinion, the hardest aspect of designing a fighting game is making it feel balanced."}
@@ -109,15 +124,7 @@ class AboutMe extends Component {
                         </div>
 
                         {/* ------ Featured Game Post ------ */}
-                        <GamePost 
-                            title={this.props.gamePosts[this.props.gamePosts.length-1].title}
-                            description={this.props.gamePosts[this.props.gamePosts.length-1].description}
-                            imageURL={this.props.gamePosts[this.props.gamePosts.length-1].imageURL}
-                            starCount={this.props.gamePosts[this.props.gamePosts.length-1].starCount}
-                            headers={this.props.gamePosts[this.props.gamePosts.length-1].headers}
-                            content={this.props.gamePosts[this.props.gamePosts.length-1].content}
-                            articlelink={this.props.gamePosts[this.props.gamePosts.length-1].articlelink}
-                        />
+                        {this.featuredGamePost()}
 
                         <Link to='/games' className='rectButton small hvr-shutter-out-horizontal'>SEE MORE</Link>
                     </div>
