@@ -38,7 +38,8 @@ class AboutMe extends Component {
     }
 
     featuredGamePost() {
-        if (this.props.gamePosts[this.props.gamePosts.length-1] != null)
+        if (this.props.gamePosts[this.props.gamePosts.length-1] != null &&
+            typeof this.props.gamePosts[this.props.gamePosts.length-1] !== 'undefined')
         {
             return <GamePost 
                 title={this.props.gamePosts[this.props.gamePosts.length-1].title}

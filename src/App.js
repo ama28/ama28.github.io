@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import AboutMe from './pages/AboutMe';
 import Games from './pages/Games';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
