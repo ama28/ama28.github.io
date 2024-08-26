@@ -36,12 +36,12 @@ class Footer extends Component {
                             <Link to='/about'>ABOUT</Link>
                             <a target='_blank' href='https://www.superjumpmagazine.com/author/adrianma/'>BLOG</a>
                             {/* <a target='_blank' href='https://docs.google.com/document/d/1s1sjBssLC0LS-1ClqeaMErWVwl9F-5AlFyeqleDR2hQ/edit?usp=sharing'>RESUME</a> */}
-                            <Link to='/games'>REVIEWS</Link>
-                            <Link to='/archive'>ARCHIVE</Link>
+                            {/* <Link to='/games'>PLAYING</Link>
+                            <Link to='/archive'>ARCHIVE</Link> */}
                         </div>
                     </div>
                     <div className='footerCopyrightContainer'>
-                        <span className='copyrightText'>© Copyright 2023 Adrian Ma</span>
+                        <span className='copyrightText'>© Copyright 2024 Adrian Ma</span>
                     </div>
                 </div>
             </div>

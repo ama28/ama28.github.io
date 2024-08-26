@@ -44,8 +44,8 @@ class Work extends Component {
 
     render() {
         const description =
-            <div className='introDescription' style={{ fontSize: '50px' }}>
-                <b>ADRIAN MA</b> <span className='semiBold' style={{ color: '#FFFF00' }}>/</span> <span className='semiBold' style={{ color: '#90EE90' }}>Game Designer</span>
+            <div className='introDescription' style={{ fontSize: '50px'}}>
+                <b>ADRIAN MA</b> <span className='semiBold' style={{ color: '#FFFF00' }}></span> <span className='semiBold' style={{ color: '#90EE90'}}>Systems & Combat Designer</span>
                 {/* <b>Adrian Ma</b> is a game designer focused on innovative the social creating <span className='semiBold' style={{color: '#90EE90'}}>
                 transformative,</span> <span className='semiBold' style={{color: '#FFFF00'}}> immersive,</span> and 
                 <span className='semiBold' style={{color: '#9999FF'}}> accessible</span> real-time experiences.  */}
@@ -78,9 +78,9 @@ class Work extends Component {
 
                 <div className='vidCarouselContainer'>
                     <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb} dynamicHeight={true} showThumbs={false}>
+                        <YoutubeSlide key="combat-prototype" url="https://www.youtube.com/embed/st2BMdaA1UQ?si=wnbW-4uY03whh5a8" />
                         <YoutubeSlide key="heuristicats" url="https://www.youtube.com/embed/r1VZ5PE3MP4?si=zkg6T6pwPjfuTF3g" />
                         <YoutubeSlide key="escape-dartist" url="https://www.youtube.com/embed/l8gRlFFCwc8?si=s9VT9C2f8gRBdmci" />
-                        <YoutubeSlide key="dimensional-rift" url="https://www.youtube.com/embed/TBNidA8OgGw" />
                         <YoutubeSlide key="tanks-in-advance" url="https://www.youtube.com/embed/uhIsBM8HQNk?si=ktmJVtbGx887g_ia" />
                         <YoutubeSlide key="space-shank" url="https://www.youtube.com/embed/Va5KK0SSgMc?si=2W8i1Na2YsrrLYEW" />
                         {/* <YoutubeSlide key="split" url="https://www.youtube.com/embed/d4vYNQTEoBo?si=A6HTmPGdt1eOnKDs" /> */}

@@ -69,12 +69,11 @@ class AboutMe extends Component {
                             {/* ------ Title and Description ------ */}
                             <div className='aboutTitle'>Hi, I'm Adrian</div>
                             <div className='aboutDescription'>
-                                <p>My goal is to design digital experiences that can leave a long-lasting impact on those who use them and to explore and develop new ways through which we can interact with technology. I love to learn about all facets of game design, but specialize in economy design and combat design. </p>
-                                <p>I graduated from Carnegie Mellon University in 2023 with degrees in Cognitive Science, Human-Computer Interaction, Game Design, and Animation, and am currently working on Piano Tiles 2 as an Associate Game Designer at Kooapps.</p>
+                                <p>My goal is to design digital experiences that can leave a long-lasting impact and to explore new ways through which we can interact with technology. I love to learn about all aspects of game design but specialize in systems and combat design. I am currently working on NBA2K Mobile as a Systems Designer at Cat Daddy Games.</p>
                             </div>
                             {/* ------ Links to External Sites ------ */}
-                            <div className='aboutLinks'>
-                                <a href='mailto:amm28y@gmail.com' target='_blank'>
+                            {/* <div className='aboutLinks'> */}
+                                {/* <a href='mailto:amm28y@gmail.com' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/email_icon.svg"} alt='email icon'></img>
                                 </a>
                                 <a href='https://adrianma.itch.io/' target='_blank'>
@@ -82,11 +81,11 @@ class AboutMe extends Component {
                                 </a>
                                 <a href='https://www.linkedin.com/in/adrian-ma8' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/linkedin_icon.svg"} alt='linkedin icon'></img>
-                                </a>
-                                <a href='https://www.superjumpmagazine.com/author/adrianma/' target='_blank'>
+                                </a> */}
+                                {/* <a href='https://www.superjumpmagazine.com/author/adrianma/' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + "/assets/icons/blog_icon.svg"} alt='medium icon'></img>
-                                </a>
-                            </div>
+                                </a> */}
+                            {/* </div> */}
                         </div>
                         
                     </div>
