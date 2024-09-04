@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cafe5cbb.css",
-    "main.js": "/static/js/main.1b08b2c0.js",
+    "main.js": "/static/js/main.3726859d.js",
     "static/js/787.e403dcb9.chunk.js": "/static/js/787.e403dcb9.chunk.js",
     "static/media/gdd.pdf": "/static/media/gdd.44c152d81aa4c49b5d14.pdf",
     "static/media/bookscoutdemo.mp4": "/static/media/bookscoutdemo.f016ed6bcbba9da598b0.mp4",
@@ -82,8 +82,8 @@
     "static/media/spindashboardlogo.png": "/static/media/spindashboardlogo.f0f964fb92ca323594dc.png",
     "static/media/ac3.png": "/static/media/ac3.ea54f6984156f56b8615.png",
     "static/media/webprototype.png": "/static/media/webprototype.22152ec25edf6ad0f5d4.png",
+    "static/media/GamePosts.csv": "/static/media/GamePosts.5b070d20cb6190b08621.csv",
     "static/media/fitsabergoals.png": "/static/media/fitsabergoals.7342f39f24e7a78e4350.png",
-    "static/media/GamePosts.csv": "/static/media/GamePosts.1cee3e77aa259532e8c7.csv",
     "static/media/ac1.png": "/static/media/ac1.8ce305182e22c9cdf369.png",
     "static/media/socials.png": "/static/media/socials.e87eb55041f05e27a726.png",
     "static/media/miastatus.png": "/static/media/miastatus.ef201708b00d57d7ede4.png",
@@ -93,11 +93,11 @@
     "index.html": "/index.html",
     "static/media/Projects.csv": "/static/media/Projects.35cf44abd52f8363080d.csv",
     "main.cafe5cbb.css.map": "/static/css/main.cafe5cbb.css.map",
-    "main.1b08b2c0.js.map": "/static/js/main.1b08b2c0.js.map",
+    "main.3726859d.js.map": "/static/js/main.3726859d.js.map",
     "787.e403dcb9.chunk.js.map": "/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cafe5cbb.css",
-    "static/js/main.1b08b2c0.js"
+    "static/js/main.3726859d.js"
   ]
 }
