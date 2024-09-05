@@ -131,7 +131,7 @@ class App extends Component {
   /* Helper function for updateGameData: combines headers and sections into a 2D array 
      where each index is an array of size 2 containing a header and its corresponding section */
   to2Darray(headers, sections) {
-    let headerArray = headers.split(', ');
+    let headerArray = headers.split('; ');
 
     let sectionsWithImages = this.formatImages(sections)
     let sectionArray = sectionsWithImages.split('\\section ') //sections are delimited by "\section" in the csv

@@ -95,11 +95,11 @@ class AboutMe extends Component {
 
                     {/* ------ Game Blog Callout ------ */}
                     <div className='aboutCallout gameCorner'>
-                        <div className='aboutCalloutTitle'>My Game Design Blog</div>
+                        <div className='aboutCalloutTitle'>Game Design Blog</div>
 
                         <div className='calloutSubHeader'>
                             <span className='calloutSubHeadLine'></span>
-                            <div>LATEST POST</div>
+                            <div>RANDOM ARTICLE</div>
                             <span className='calloutSubHeadLine'></span>
                         </div>
 
@@ -115,7 +115,7 @@ class AboutMe extends Component {
                     </div>
 
                     <div className='aboutCallout gameCorner'>
-                        <div className='aboutCalloutTitle'>The Game Corner</div>
+                        <div className='aboutCalloutTitle'>Game Reflections</div>
 
                         <div className='calloutSubHeader'>
                             <span className='calloutSubHeadLine'></span>
@@ -134,7 +134,7 @@ class AboutMe extends Component {
                     <div className='aboutWebsite'>
                         <a href='https://ama28.github.io/websiteV3/' target='_blank'><img src={require('../images/oldwebsite.png')}></img></a>
                         <div>
-                            <h1>This Website</h1>
+                            <h1>About This Website</h1>
                             <p>This website is my third iteration of a portfolio site (second iteration on the left), and was <b>built from scratch using React without the use of any component libraries like Bootstrap.</b> <br></br><br></br>I’ve designed a lot of websites, but never really understood the experiences of the developers that would have to implement my designs. <b>This project serves to help me bridge that gap so that I can better understand developer needs in my future work.</b> </p>
                             <p>The most crucial problem with my previous iterations was the difficulty of adding new content. The third iteration incorporates a better user experience and solves this problem through <b>a system I created with the Papa Parse package that allows me to add new content to the site through csv files, without needing to touch even a line of code.</b> </p>
                         </div>
